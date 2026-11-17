@@ -138,8 +138,8 @@ button {
   max-width: var(--container-max);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: clamp(1rem, 3vw, 1.75rem);
+  padding-right: clamp(1rem, 3vw, 1.75rem);
   position: relative;
   z-index: 1;
 }
@@ -463,7 +463,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .hero-section {
   padding-top: calc(var(--nav-height) + var(--space-2xl));
-  padding-bottom: var(--space-3xl);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
   position: relative;
   overflow: hidden;
 }
@@ -1599,8 +1599,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Telemetry HUD Box */
 .telemetry-hud-box {
   position: absolute;
-  bottom: 35px;
-  left: 24px;
+  bottom: 24px;
+  left: clamp(12px, 3vw, 28px);
   pointer-events: auto;
   z-index: 25;
 }
