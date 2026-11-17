@@ -20,13 +20,19 @@ const translations = {
     "hero.ctaEstimate": "Hibabejelentés & Árajánlat",
     "hero.ctaCall": "Azonnali hívás: +36 30 894 7739",
     "hero.stat1.val": "5.0 ★",
-    "hero.stat1.label": "Maximális ügyfélelgedettség",
+    "hero.stat1.label": "Kiváló ügyfélértékelés",
     "hero.stat2.val": "KuKirin",
     "hero.stat2.label": "Kiemelt típus-specialista",
     "hero.stat3.val": "1-2 nap",
     "hero.stat3.label": "Gyors szerviz átfutás",
     "hero.stat4.val": "Göd",
     "hero.stat4.label": "Mikszáth K. utca 68.",
+    "hero.card.subtitle": "Hivatalos szerviz & tuning műhely",
+    "hero.chip1": "KuKirin Specialista",
+    "hero.chip2": "Hidraulikus Fékek",
+    "hero.chip3": "Nullrevízió",
+    "hero.chip4": "Defektmentesítés",
+    "hero.chip5": "Elektronika",
 
     // Támogatott márkák szalag
     "brands.title": "Specializált típusok & márkafüggetlen szerviz",
@@ -176,8 +182,10 @@ const translations = {
 
     // Footer
     "footer.desc": "Márkafüggetlen elektromos roller szerviz, beüzemelés és egyedi tuning Gödön.",
+    "footer.backToTop": "↑ Vissza a tetejére",
     "footer.rights": "Minden jog fenntartva.",
-    "footer.credit": "Weboldal demó koncepció: Besztweb Stúdió (beszterczey.com)",
+    "footer.creditText": "⚡ Weboldal koncepció:",
+    "footer.credit": "Besztweb Stúdió (beszterczey.com)",
 
     // Lebegő sáv mobilon
     "float.call": "Hívás",
@@ -204,13 +212,19 @@ const translations = {
     "hero.ctaEstimate": "Report Issue & Request Quote",
     "hero.ctaCall": "Call now: +36 30 894 7739",
     "hero.stat1.val": "5.0 ★",
-    "hero.stat1.label": "Top customer satisfaction",
+    "hero.stat1.label": "Top customer rating",
     "hero.stat2.val": "KuKirin",
     "hero.stat2.label": "Specialized brand expertise",
     "hero.stat3.val": "1-2 days",
     "hero.stat3.label": "Fast service turnaround",
     "hero.stat4.val": "Göd",
     "hero.stat4.label": "Mikszáth K. street 68.",
+    "hero.card.subtitle": "Authorized Service & Tuning Workshop",
+    "hero.chip1": "KuKirin Specialist",
+    "hero.chip2": "Hydraulic Brakes",
+    "hero.chip3": "Zero-Revision",
+    "hero.chip4": "Puncture Guard",
+    "hero.chip5": "Electronics",
 
     // Brands strip
     "brands.title": "Specialized in leading brands & all-make scooter repairs",
@@ -360,8 +374,10 @@ const translations = {
 
     // Footer
     "footer.desc": "Specialized electric scooter service, zero-revision setup and custom tuning in Göd.",
+    "footer.backToTop": "↑ Back to top",
     "footer.rights": "All rights reserved.",
-    "footer.credit": "Website Demo Concept by Besztweb Studio (beszterczey.com)",
+    "footer.creditText": "⚡ Website Concept:",
+    "footer.credit": "Besztweb Studio (beszterczey.com)",
 
     // Floating bar
     "float.call": "Call",

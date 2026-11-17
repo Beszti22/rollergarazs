@@ -104,7 +104,7 @@
         </div>
 
         <!-- Direct Call CTA -->
-        <a href="tel:+36308947739" class="btn btn-primary" style="padding: 0.55rem 1rem; font-size: 0.85rem; min-height: 40px;">
+        <a href="tel:+36308947739" class="btn btn-primary call-btn" style="padding: 0.55rem 1rem; font-size: 0.85rem; min-height: 40px; white-space: nowrap;">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
           </svg>
@@ -184,13 +184,13 @@
         <div class="hero-visual-card">
           <img src="assets/logo.webp" alt="RollerGarázs Embléma" class="hero-badge-img" width="200" height="200">
           <h2 class="hero-card-title">ROLLER GARÁZS</h2>
-          <p style="color: var(--text-muted); font-size: 0.95rem;">Hivatalos szerviz & tuning műhely</p>
+          <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="hero.card.subtitle">Hivatalos szerviz & tuning műhely</p>
           <div class="hero-card-tags">
-            <span class="pill-tag accent">KuKirin Specialista</span>
-            <span class="pill-tag">Hidraulikus Fékek</span>
-            <span class="pill-tag">Nullrevízió</span>
-            <span class="pill-tag">Defektmentesítés</span>
-            <span class="pill-tag">Elektronika</span>
+            <span class="pill-tag accent" data-i18n="hero.chip1">KuKirin Specialista</span>
+            <span class="pill-tag" data-i18n="hero.chip2">Hidraulikus Fékek</span>
+            <span class="pill-tag" data-i18n="hero.chip3">Nullrevízió</span>
+            <span class="pill-tag" data-i18n="hero.chip4">Defektmentesítés</span>
+            <span class="pill-tag" data-i18n="hero.chip5">Elektronika</span>
           </div>
         </div>
       </div>
@@ -228,9 +228,9 @@
 
         <!-- Navigation Tabs -->
         <div class="tabs-nav" role="tablist">
-          <button class="tab-btn active" data-tab="tab-kukirin" role="tab" data-i18n="issues.tab1">KuKirin széria (G2, G2 Master, G4)</button>
-          <button class="tab-btn" data-tab="tab-xiaomi" role="tab" data-i18n="issues.tab2">Xiaomi & Segway-Ninebot</button>
-          <button class="tab-btn" data-tab="tab-heavy" role="tab" data-i18n="issues.tab3">Nagy teljesítményű rollerek</button>
+          <button class="tab-btn active" data-tab="tab-kukirin" role="tab" aria-selected="true" data-i18n="issues.tab1">KuKirin széria (G2, G2 Master, G4)</button>
+          <button class="tab-btn" data-tab="tab-xiaomi" role="tab" aria-selected="false" data-i18n="issues.tab2">Xiaomi & Segway-Ninebot</button>
+          <button class="tab-btn" data-tab="tab-heavy" role="tab" aria-selected="false" data-i18n="issues.tab3">Nagy teljesítményű rollerek</button>
         </div>
 
         <!-- Tab 1: KuKirin -->
@@ -818,7 +818,7 @@
           </div>
         </div>
         <div>
-          <a href="#hero" class="btn btn-outline-red" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; min-height: 38px;">
+          <a href="#hero" class="btn btn-outline-red" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; min-height: 38px;" data-i18n="footer.backToTop">
             ↑ Vissza a tetejére
           </a>
         </div>
@@ -830,8 +830,8 @@
         </div>
         <div>
           <a href="https://beszterczey.com" target="_blank" rel="noopener noreferrer" class="besztweb-credit">
-            <span>⚡ Weboldal koncepció:</span>
-            <strong style="color:var(--text-main);">Besztweb Stúdió</strong>
+            <span data-i18n="footer.creditText">⚡ Weboldal koncepció:</span>
+            <strong style="color:var(--text-main);" data-i18n="footer.credit">Besztweb Stúdió</strong>
           </a>
         </div>
       </div>
