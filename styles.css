@@ -1541,6 +1541,331 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* ==========================================================================
+   Ambient Electric Scooter Rider Animation Background Track
+   ========================================================================== */
+.scooter-bg-track {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 190px;
+  pointer-events: none;
+  z-index: 15;
+  overflow: hidden;
+}
+
+/* Glowing Neon Road Bed & Laser Dashes */
+.laser-road-bed {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(229, 37, 33, 0) 0%,
+    rgba(229, 37, 33, 0.45) 20%,
+    rgba(6, 182, 212, 0.6) 50%,
+    rgba(229, 37, 33, 0.45) 80%,
+    rgba(229, 37, 33, 0) 100%
+  );
+  box-shadow: 0 0 12px rgba(229, 37, 33, 0.5), 0 0 24px rgba(6, 182, 212, 0.3);
+}
+
+.laser-road-dashes {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.7) 0px,
+    rgba(255, 255, 255, 0.7) 20px,
+    transparent 20px,
+    transparent 60px
+  );
+  animation: roadDashesCruise 0.7s linear infinite;
+}
+
+.scooter-bg-track.turbo-active .laser-road-dashes,
+.scooter-bg-track.scrolling-active .laser-road-dashes {
+  animation-duration: 0.25s;
+}
+
+@keyframes roadDashesCruise {
+  from { background-position-x: 0px; }
+  to { background-position-x: -240px; }
+}
+
+/* Telemetry HUD Box */
+.telemetry-hud-box {
+  position: absolute;
+  bottom: 35px;
+  left: 24px;
+  pointer-events: auto;
+  z-index: 25;
+}
+
+.telemetry-hud-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(13, 17, 26, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-accent);
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-full);
+  color: var(--text-main);
+  box-shadow: var(--shadow-sm), 0 0 16px rgba(229, 37, 33, 0.2);
+  transition: all 0.25s ease;
+}
+
+.telemetry-hud-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary-hover);
+  box-shadow: 0 0 20px rgba(229, 37, 33, 0.45);
+}
+
+.hud-indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-cyan);
+  box-shadow: 0 0 8px var(--color-cyan);
+  animation: pulseCyan 1.5s infinite;
+}
+
+@keyframes pulseCyan {
+  0%, 100% { opacity: 0.6; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.15); box-shadow: 0 0 12px var(--color-cyan); }
+}
+
+.hud-speed {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.hud-specs {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+}
+
+.hud-turbo-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: rgba(229, 37, 33, 0.2);
+  color: var(--color-primary-hover);
+  border: 1px solid var(--border-accent);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+}
+
+.scooter-bg-track.turbo-active .hud-turbo-tag {
+  background: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(229, 37, 33, 0.8);
+  animation: turboTagPulse 0.4s infinite alternate;
+}
+
+@keyframes turboTagPulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+/* Scooter Rider Mover (Continuous Traversal) */
+.scooter-rider-mover {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  width: 290px;
+  height: 180px;
+  will-change: transform;
+  animation: scooterCruiseLoop 12s linear infinite;
+}
+
+.scooter-bg-track.scrolling-active .scooter-rider-mover {
+  animation-duration: 6s;
+}
+
+.scooter-bg-track.turbo-active .scooter-rider-mover {
+  animation-duration: 4.2s;
+}
+
+@keyframes scooterCruiseLoop {
+  0% {
+    transform: translateX(-340px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 340px));
+  }
+}
+
+.scooter-rider-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.7));
+}
+
+/* Wheel Rotations */
+.spinning-spokes-rear, .spinning-spokes-front {
+  animation: wheelSpinning 0.28s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.scooter-bg-track.turbo-active .spinning-spokes-rear,
+.scooter-bg-track.turbo-active .spinning-spokes-front,
+.scooter-bg-track.scrolling-active .spinning-spokes-rear,
+.scooter-bg-track.scrolling-active .spinning-spokes-front {
+  animation-duration: 0.1s;
+}
+
+@keyframes wheelSpinning {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Chassis Suspension Gentle Bouncing */
+.scooter-bounce-chassis {
+  animation: suspensionBounceAction 0.42s ease-in-out infinite alternate;
+  transform-origin: 140px 155px;
+}
+
+.scooter-bg-track.turbo-active .scooter-bounce-chassis {
+  animation: suspensionTurboAction 0.25s ease-in-out infinite alternate;
+}
+
+@keyframes suspensionBounceAction {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-2.5px) rotate(-0.4deg); }
+  100% { transform: translateY(1.2px) rotate(0.3deg); }
+}
+
+@keyframes suspensionTurboAction {
+  0% { transform: translateY(0px) rotate(-2deg); }
+  100% { transform: translateY(-3.5px) rotate(-1deg); }
+}
+
+/* Headlight Projection Glow */
+.headlight-beam {
+  animation: headlightFlicker 1.8s ease-in-out infinite alternate;
+  transform-origin: 214px 72px;
+}
+
+.scooter-bg-track.turbo-active .headlight-beam {
+  opacity: 1;
+  transform: scaleY(1.15) scaleX(1.2);
+}
+
+@keyframes headlightFlicker {
+  0% { opacity: 0.78; }
+  50% { opacity: 0.95; }
+  100% { opacity: 0.85; }
+}
+
+/* Underglow Neon Pulse */
+.underglow-pulse {
+  animation: underglowBreathing 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes underglowBreathing {
+  0% { opacity: 0.35; rx: 75; }
+  100% { opacity: 0.65; rx: 88; }
+}
+
+/* Tail Lasers & Nitro Flames */
+.laser-tail-main {
+  animation: tailPulseAnim 0.35s ease-in-out infinite alternate;
+}
+
+@keyframes tailPulseAnim {
+  0% { stroke-width: 4px; opacity: 0.75; }
+  100% { stroke-width: 5.5px; opacity: 1; }
+}
+
+.turbo-flame-path {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.scooter-bg-track.turbo-active .turbo-flame-path,
+.scooter-bg-track.scrolling-active .turbo-flame-path {
+  opacity: 1;
+  animation: nitroFlameFlicker 0.1s steps(2, start) infinite alternate;
+}
+
+@keyframes nitroFlameFlicker {
+  0% { stroke-width: 5px; opacity: 0.85; }
+  100% { stroke-width: 8px; opacity: 1; }
+}
+
+/* Sparks Burst from Rear Wheel */
+.spark {
+  animation: sparkFlyAnim 0.4s ease-out infinite;
+  opacity: 0;
+}
+
+.spark.s1 { animation-delay: 0.05s; }
+.spark.s2 { animation-delay: 0.15s; }
+.spark.s3 { animation-delay: 0.25s; }
+.spark.s4 { animation-delay: 0.35s; }
+
+.scooter-bg-track.turbo-active .spark,
+.scooter-bg-track.scrolling-active .spark {
+  opacity: 1;
+}
+
+@keyframes sparkFlyAnim {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-35px, -18px) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+  .scooter-bg-track {
+    bottom: 74px; /* Lift above the mobile sticky bar */
+    height: 140px;
+  }
+
+  .scooter-rider-mover {
+    width: 220px;
+    height: 135px;
+    bottom: 18px;
+  }
+
+  .laser-road-bed {
+    bottom: 18px;
+  }
+
+  .telemetry-hud-box {
+    bottom: 26px;
+    left: 12px;
+  }
+
+  .telemetry-hud-btn {
+    padding: 0.35rem 0.65rem;
+    gap: 0.45rem;
+  }
+
+  .hud-specs {
+    display: none;
+  }
+}
+
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

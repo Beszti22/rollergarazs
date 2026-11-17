@@ -265,4 +265,54 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 9. Ambient E-Scooter Rider & Turbo Engine
+  const scooterTrack = document.getElementById('scooterTrack');
+  const turboHudBtn = document.getElementById('turboHudBtn');
+  const hudSpeedVal = document.getElementById('hudSpeedVal');
+  const hudTurboTag = document.getElementById('hudTurboTag');
+  const scooterMover = document.getElementById('scooterMover');
+
+  let scrollTimeout = null;
+  let turboTimeout = null;
+  let isTurboActive = false;
+
+  // React to User Scroll with Velocity Surge
+  window.addEventListener('scroll', () => {
+    if (isTurboActive || !scooterTrack) return;
+
+    scooterTrack.classList.add('scrolling-active');
+    if (hudSpeedVal) hudSpeedVal.textContent = '74 km/h';
+
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      if (!isTurboActive && scooterTrack) {
+        scooterTrack.classList.remove('scrolling-active');
+        if (hudSpeedVal) hudSpeedVal.textContent = '58 km/h';
+      }
+    }, 350);
+  }, { passive: true });
+
+  // Interactive Nitro Boost Trigger
+  function activateNitroBoost() {
+    if (!scooterTrack) return;
+    isTurboActive = true;
+    clearTimeout(turboTimeout);
+
+    scooterTrack.classList.remove('scrolling-active');
+    scooterTrack.classList.add('turbo-active');
+
+    if (hudSpeedVal) hudSpeedVal.textContent = '88 km/h';
+    if (hudTurboTag) hudTurboTag.textContent = '🔥 NITRO BURNOUT!';
+
+    turboTimeout = setTimeout(() => {
+      isTurboActive = false;
+      scooterTrack.classList.remove('turbo-active');
+      if (hudSpeedVal) hudSpeedVal.textContent = '58 km/h';
+      if (hudTurboTag) hudTurboTag.textContent = '⚡ NITRO BOOST';
+    }, 4500);
+  }
+
+  turboHudBtn?.addEventListener('click', activateNitroBoost);
+  scooterMover?.addEventListener('click', activateNitroBoost);
 });
