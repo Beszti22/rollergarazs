@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RollerGarázs — Elektromos roller szerviz, beüzemelés & tuning Göd</title>
+  <meta name="description" content="Márkafüggetlen elektromos roller szerviz, beüzemelés és profi tuning Gödön. KuKirin, Xiaomi, Segway-Ninebot, Joyor defektjavítás, nullrevízió, hidraulikus fékcsere és típushiba-javítás.">
+  <meta name="keywords" content="roller szerviz göd, kukirin szerviz, elektromos roller javítás, elektromos roller defekt, nullrevízió roller, roller tuning göd, rollergarazs">
+  <meta name="author" content="RollerGarázs & Besztweb">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="business.business">
+  <meta property="og:title" content="RollerGarázs — Elektromos roller szerviz & tuning Göd">
+  <meta property="og:description" content="Professzionális elektromos roller szerviz, beüzemelés, nullrevízió és tuning Gödön. KuKirin specialista, 5.0 Google értékelés.">
+  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:url" content="https://rollergarazs.vercel.app">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Schema.org LocalBusiness Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "RollerGarázs",
+    "image": "https://rollergarazs.vercel.app/assets/logo.png",
+    "telephone": "+36308947739",
+    "email": "joe.escooter@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mikszáth Kálmán utca 68.",
+      "addressLocality": "Göd",
+      "postalCode": "2131",
+      "addressCountry": "HU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 47.6776119,
+      "longitude": 19.1353194
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "28"
+    },
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Site Header & Sticky Navigation
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand-wrapper" aria-label="RollerGarázs Főoldal">
+        <img src="assets/logo.webp" alt="RollerGarázs Logo" class="brand-logo-img" width="44" height="44">
+        <div class="brand-text">
+          <span class="brand-name">ROLLER<span class="accent">GARÁZS</span></span>
+          <span class="brand-tagline" data-i18n="nav.tagline">Elektromos roller szerviz & tuning • Göd</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Fő navigáció">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#szolgaltatasok" class="nav-link" data-i18n="nav.services">Szolgáltatások</a></li>
+          <li><a href="#tipushibak" class="nav-link" data-i18n="nav.issues">Típushibák</a></li>
+          <li><a href="#kalkulator" class="nav-link" data-i18n="nav.calculator">Árkalkulátor</a></li>
+          <li><a href="#muhely" class="nav-link" data-i18n="nav.workshop">A műhely</a></li>
+          <li><a href="#velemenyek" class="nav-link" data-i18n="nav.reviews">Vélemények</a></li>
+          <li><a href="#kapcsolat" class="nav-link" data-i18n="nav.contact">Kapcsolat</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Live Status Pill -->
+        <div class="status-pill" title="Műhely aktuális státusza">
+          <span class="pulse-dot"></span>
+          <span id="statusText" data-i18n="nav.openStatus">Műhely nyitva • Bejelentkezés ajánlott</span>
+        </div>
+
+        <!-- Language Switcher -->
+        <div class="lang-toggle" role="group" aria-label="Nyelvválasztó">
+          <button class="lang-btn active" data-lang="hu" aria-label="Magyar nyelv">HU</button>
+          <button class="lang-btn" data-lang="en" aria-label="English language">EN</button>
+        </div>
+
+        <!-- Direct Call CTA -->
+        <a href="tel:+36308947739" class="btn btn-primary" style="padding: 0.55rem 1rem; font-size: 0.85rem; min-height: 40px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span class="call-text">+36 30 894 7739</span>
+        </a>
+
+        <!-- Mobile Nav Toggle -->
+        <button class="nav-mobile-toggle" id="mobileNavToggle" aria-label="Menü megnyitása">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="section-badge" data-i18n="hero.badge">
+            ⚡ GÖDI ROLLER SZERVIZ & TUNING MŰHELY • 5.0 ★ ÉRTÉKELÉS
+          </div>
+          <h1 class="hero-title" data-i18n="hero.title">
+            Elektromos roller szerviz, beüzemelés és profi tuning.
+          </h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            KuKirin, Xiaomi, Segway-Ninebot, Joyor és nagy teljesítményű gépek professzionális javítása Gödön. Defektjavítás, nullrevízió, hidraulikus fékcsere és típushiba-megszüntetés garanciával.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#kalkulator" class="btn btn-primary" data-i18n="hero.ctaEstimate">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              Hibabejelentés & Árajánlat
+            </a>
+            <a href="tel:+36308947739" class="btn btn-secondary" data-i18n="hero.ctaCall">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              Azonnali hívás: +36 30 894 7739
+            </a>
+          </div>
+
+          <!-- Hero Trust Stats -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-val red" data-i18n="hero.stat1.val">5.0 ★</span>
+              <span class="stat-label" data-i18n="hero.stat1.label">Maximális ügyfélelgedettség</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val" data-i18n="hero.stat2.val">KuKirin</span>
+              <span class="stat-label" data-i18n="hero.stat2.label">Kiemelt típus-specialista</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val red" data-i18n="hero.stat3.val">1-2 nap</span>
+              <span class="stat-label" data-i18n="hero.stat3.label">Gyors szerviz átfutás</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val" data-i18n="hero.stat4.val">Göd</span>
+              <span class="stat-label" data-i18n="hero.stat4.label">Mikszáth K. utca 68.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Badge Card -->
+        <div class="hero-visual-card">
+          <img src="assets/logo.webp" alt="RollerGarázs Embléma" class="hero-badge-img" width="200" height="200">
+          <h2 class="hero-card-title">ROLLER GARÁZS</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Hivatalos szerviz & tuning műhely</p>
+          <div class="hero-card-tags">
+            <span class="pill-tag accent">KuKirin Specialista</span>
+            <span class="pill-tag">Hidraulikus Fékek</span>
+            <span class="pill-tag">Nullrevízió</span>
+            <span class="pill-tag">Defektmentesítés</span>
+            <span class="pill-tag">Elektronika</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Supported Brands Strip
+         ========================================================================== -->
+    <section class="brand-strip" aria-label="Márkák">
+      <div class="container brands-container">
+        <span class="brands-label" data-i18n="brands.title">Specializált típusok & márkafüggetlen szerviz</span>
+        <div class="brand-chips">
+          <span class="brand-chip featured">⚡ KuKirin / Kugoo</span>
+          <span class="brand-chip">Xiaomi (M365, Pro, 4 Ultra)</span>
+          <span class="brand-chip">Segway-Ninebot (MAX G30, G2)</span>
+          <span class="brand-chip">Joyor</span>
+          <span class="brand-chip">Dualtron</span>
+          <span class="brand-chip">Kaabo</span>
+          <span class="brand-chip">Angwatt</span>
+          <span class="brand-chip">Laotie</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Típushibák & Megoldások (Interactive Problem Solver)
+         ========================================================================== -->
+    <section class="issues-section" id="tipushibak">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="issues.badge">SZAKÉRTELEM & GYAKORLAT</div>
+          <h2 data-i18n="issues.title">Gyakori típushibák, amiket csukott szemmel is javítunk</h2>
+          <p data-i18n="issues.subtitle">Nem csak alkatrészt cserélünk: orvosoljuk a gyári tervezési hiányosságokat, hogy a rollered biztonságos és tartós legyen.</p>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="tabs-nav" role="tablist">
+          <button class="tab-btn active" data-tab="tab-kukirin" role="tab" data-i18n="issues.tab1">KuKirin széria (G2, G2 Master, G4)</button>
+          <button class="tab-btn" data-tab="tab-xiaomi" role="tab" data-i18n="issues.tab2">Xiaomi & Segway-Ninebot</button>
+          <button class="tab-btn" data-tab="tab-heavy" role="tab" data-i18n="issues.tab3">Nagy teljesítményű rollerek</button>
+        </div>
+
+        <!-- Tab 1: KuKirin -->
+        <div class="tab-pane active" id="tab-kukirin" role="tabpanel">
+          <div class="issue-card">
+            <div class="issue-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <h3 class="issue-card-title" data-i18n="issues.kukirin.p1.title">Kormányszár és nyak kotyogás</h3>
+            <p class="issue-card-desc" data-i18n="issues.kukirin.p1.desc">A gyári csavarok és illesztések lazulása életveszélyes kormány-holtjátékot okoz. Speciális hézagolással, menetrögzítővel és szükség esetén csapágycserével stabilizáljuk.</p>
+          </div>
+          <div class="issue-card">
+            <div class="issue-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="issue-card-title" data-i18n="issues.kukirin.p2.title">Gyárilag száraz futómű és lengőkarok</h3>
+            <p class="issue-card-desc" data-i18n="issues.kukirin.p2.desc">A webshopos dobozokból érkező rollerek lengőkarjai szinte zsírzás nélkül futnak. Nagynyomású PTFE zsírzással és szilent-karbantartással megvédjük a kopástól és nyikorgástól.</p>
+          </div>
+          <div class="issue-card">
+            <div class="issue-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 12h8"></path>
+              </svg>
+            </div>
+            <h3 class="issue-card-title" data-i18n="issues.kukirin.p3.title">Gyenge gyári mechanikus fékek</h3>
+            <p class="issue-card-desc" data-i18n="issues.kukirin.p3.desc">25-60 km/h felett a bowdenes fék nem fog biztonságosan megállítani. Komplett Nutt vagy Zoom hidraulikus fékrendszer beépítést és légtelenítést végzünk.</p>
+          </div>
+        </div>
+
+        <!-- Tab 2: Xiaomi & Ninebot -->
+        <div class="tab-pane" id="tab-xiaomi" role="tabpanel">
+          <div class="issue-card">
+            <div class="issue-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+              </svg>
+            </div>
+            <h3 class="issue-card-title" data-i18n="issues.xiaomi.p1.title">Gyakori defekt és vékony belsők</h3>
+            <p class="issue-card-desc" data-i18n="issues.xiaomi.p1.desc">A vékony gyári belső gumi könnyen becsípődik. Vastagított prémium belsőt, Slime defektvédelmet, vagy hidraulikus préssel illesztett rázkódásmentes tömör gumit szerelünk fel.</p>
+          </div>
+          <div class="issue-card">
+            <div class="issue-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3 class="issue-card-title" data-i18n="issues.xiaomi.p2.title">Kormánynyitó fül kopás és törés</h3>
+            <p class="issue-card-desc" data-i18n="issues.xiaomi.p2.desc">Az alumínium zárófül idővel kikopik, kinyílhat menet közben. Megerősített ötvözet zárófület építünk be biztonsági rögzítéssel.</p>
+          </div>
+          <div class="issue-card">
+            <div class="issue-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="issue-card-title" data-i18n="issues.xiaomi.p3.title">Akkumulátor forrfül leválás (Error 21)</h3>
+            <p class="issue-card-desc" data-i18n="issues.xiaomi.p3.desc">A rázkódástól leugró nikkel szalagok BMS hibát okoznak. Ponthegesztéses megerősítéssel és vezérlő diagnosztikával helyreállítjuk az akkupakkot.</p>
+          </div>
+        </div>
+
+        <!-- Tab 3: Heavy / Performance -->
+        <div class="tab-pane" id="tab-heavy" role="tabpanel">
+          <div class="issue-card">
+            <div class="issue-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="issue-card-title" data-i18n="issues.heavy.p1.title">Kormányszitálás (High-speed Wobble)</h3>
+            <p class="issue-card-desc" data-i18n="issues.heavy.p1.desc">Nagy sebességnél fellépő veszélyes kormányrázkódás. Állítható kormánystabilizátor gátló (steering damper) precíziós felszerelésével szüntetjük meg.</p>
+          </div>
+          <div class="issue-card">
+            <div class="issue-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+              </svg>
+            </div>
+            <h3 class="issue-card-title" data-i18n="issues.heavy.p2.title">Elektronika és kontroller melegedés</h3>
+            <p class="issue-card-desc" data-i18n="issues.heavy.p2.desc">Magas terhelésnél a vezérlő túlmelegedhet és letilthat. Hővezető pasztázással, MOSFET megerősítéssel és kontroller hűtéssel tesszük megbízhatóvá.</p>
+          </div>
+          <div class="issue-card">
+            <div class="issue-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+            </div>
+            <h3 class="issue-card-title" data-i18n="issues.heavy.p3.title">Vízállóság és esővédelem hiánya</h3>
+            <p class="issue-card-desc" data-i18n="issues.heavy.p3.desc">A gyári rollerek ritkán bírják a hazai esőket. Fedél- és kábelátvezetés szilikonos szigeteléssel megelőzzük a beázásos zárlatokat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Services & Pricing Grid
+         ========================================================================== -->
+    <section class="services-section" id="szolgaltatasok">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge cyan" data-i18n="services.badge">SZOLGÁLTATÁSOK & IRÁNYÁRAK</div>
+          <h2 data-i18n="services.title">Profi műhely, átlátható árak, garanciális munka</h2>
+          <p data-i18n="services.subtitle">Nincsenek rejtett költségek. A leadáskor átvizsgáljuk a rollert és előre egyeztetjük a várható javítási összeget.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-meta-top">
+              <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <span class="service-time" data-i18n="services.s1.time">1 munkanap</span>
+            </div>
+            <h3 class="service-title" data-i18n="services.s1.title">Új roller beüzemelés („Nullrevízió”)</h3>
+            <p class="service-desc" data-i18n="services.s1.desc">Webshopból rendelt dobozos gép? Ne menj ki vele a forgalomba átvizsgálás nélkül! Csavarrögzítés (Loctite), futómű zsírzás, fék- és futómű-beállítás, guminyomás ellenőrzés.</p>
+            <div class="service-price-row">
+              <span class="service-price" data-i18n="services.s1.price">14 900 Ft-tól</span>
+              <a href="#kalkulator" class="btn btn-outline-red" style="padding: 0.35rem 0.8rem; font-size: 0.8rem; min-height: 36px;">Időpont kérés</a>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-meta-top">
+              <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="4"></circle>
+                </svg>
+              </div>
+              <span class="service-time" data-i18n="services.s2.time">Akár aznapra</span>
+            </div>
+            <h3 class="service-title" data-i18n="services.s2.title">Defektjavítás & Gumicsere</h3>
+            <p class="service-desc" data-i18n="services.s2.desc">Belső gumicsere megerősített tömlővel, defektgátló védőfolyadékkal, vagy prémium cellás tömör gumi felszerelése hidraulikus présgéppel.</p>
+            <div class="service-price-row">
+              <span class="service-price" data-i18n="services.s2.price">8 500 Ft-tól</span>
+              <a href="#kalkulator" class="btn btn-outline-red" style="padding: 0.35rem 0.8rem; font-size: 0.8rem; min-height: 36px;">Időpont kérés</a>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-meta-top">
+              <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </div>
+              <span class="service-time" data-i18n="services.s3.time">1-2 munkanap</span>
+            </div>
+            <h3 class="service-title" data-i18n="services.s3.title">Fékrendszer tuning & Hidraulika</h3>
+            <p class="service-desc" data-i18n="services.s3.desc">Bowdenes mechanikus fékek cseréje professzionális Nutt vagy Zoom hidraulikus rendszerre, fékolaj töltés, légtelenítés, tárcsa egyengetés és kopásálló betétek.</p>
+            <div class="service-price-row">
+              <span class="service-price" data-i18n="services.s3.price">9 900 Ft-tól</span>
+              <a href="#kalkulator" class="btn btn-outline-red" style="padding: 0.35rem 0.8rem; font-size: 0.8rem; min-height: 36px;">Időpont kérés</a>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-meta-top">
+              <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <span class="service-time" data-i18n="services.s4.time">1 munkanap</span>
+            </div>
+            <h3 class="service-title" data-i18n="services.s4.title">Futómű & Kormányszár stabilizálás</h3>
+            <p class="service-desc" data-i18n="services.s4.desc">Kormánykotyogás megszüntetése, kormányszár csapágyak cseréje, lengőkar szilentek, rugóstagok cseréje és kormánystabilizátor felszerelése.</p>
+            <div class="service-price-row">
+              <span class="service-price" data-i18n="services.s4.price">11 900 Ft-tól</span>
+              <a href="#kalkulator" class="btn btn-outline-red" style="padding: 0.35rem 0.8rem; font-size: 0.8rem; min-height: 36px;">Időpont kérés</a>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card">
+            <div class="service-meta-top">
+              <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <span class="service-time" data-i18n="services.s5.time">1-3 munkanap</span>
+            </div>
+            <h3 class="service-title" data-i18n="services.s5.title">Elektronika & Akkumulátor javítás</h3>
+            <p class="service-desc" data-i18n="services.s5.desc">Hibakód diagnosztika, vezérlő (controller) csere, gázkar és kijelző hibák javítása, akku cellateszt és BMS helyreállítás, kábelköteg felújítás.</p>
+            <div class="service-price-row">
+              <span class="service-price" style="font-size: 1rem;" data-i18n="services.s5.price">Egyedi felmérés alapján</span>
+              <a href="#kalkulator" class="btn btn-outline-red" style="padding: 0.35rem 0.8rem; font-size: 0.8rem; min-height: 36px;">Időpont kérés</a>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card">
+            <div class="service-meta-top">
+              <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <span class="service-time" data-i18n="services.s6.time">1 munkanap</span>
+            </div>
+            <h3 class="service-title" data-i18n="services.s6.title">Vízszigetelés (IP védelem tuning)</h3>
+            <p class="service-desc" data-i18n="services.s6.desc">Vezérlőház, akkufedél és kijelző tömítése prémium szilikonnal és tömítőanyagokkal a beázás okozta drága zárlatok megelőzésére.</p>
+            <div class="service-price-row">
+              <span class="service-price" data-i18n="services.s6.price">12 500 Ft-tól</span>
+              <a href="#kalkulator" class="btn btn-outline-red" style="padding: 0.35rem 0.8rem; font-size: 0.8rem; min-height: 36px;">Időpont kérés</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Interactive Calculator & Quote Wizard
+         ========================================================================== -->
+    <section class="calc-section" id="kalkulator">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="calc.badge">ONLINE HIBABEJELENTÉS & KALKULÁTOR</div>
+          <h2 data-i18n="calc.title">Milyen rollerrel és milyen hibával érkeznél?</h2>
+          <p data-i18n="calc.subtitle">Válaszd ki a típusodat és a problémát a gyors tájékoztató kalkulációhoz, vagy küldd el az adataidat és visszahívunk az időponttal!</p>
+        </div>
+
+        <div class="calc-wrapper">
+          <!-- Left Selector Side -->
+          <div class="calc-selector-side">
+            <!-- Brand Selection -->
+            <div class="calc-group">
+              <label class="calc-label" data-i18n="calc.step1">1. Válaszd ki a márkát:</label>
+              <div class="pill-grid">
+                <button class="pill-btn brand-pill active" data-brand="kukirin" data-i18n="calc.brand.kukirin">KuKirin / Kugoo</button>
+                <button class="pill-btn brand-pill" data-brand="xiaomi" data-i18n="calc.brand.xiaomi">Xiaomi széria</button>
+                <button class="pill-btn brand-pill" data-brand="ninebot" data-i18n="calc.brand.ninebot">Segway-Ninebot</button>
+                <button class="pill-btn brand-pill" data-brand="joyor" data-i18n="calc.brand.joyor">Joyor</button>
+                <button class="pill-btn brand-pill" data-brand="performance" data-i18n="calc.brand.performance">Dualtron / Kaabo / Laotie</button>
+                <button class="pill-btn brand-pill" data-brand="other" data-i18n="calc.brand.other">Egyéb márka</button>
+              </div>
+            </div>
+
+            <!-- Issue Selection -->
+            <div class="calc-group">
+              <label class="calc-label" data-i18n="calc.step2">2. Válaszd ki a fő hibát:</label>
+              <div class="pill-grid">
+                <button class="pill-btn issue-pill" data-issue="flat" data-i18n="calc.issue.flat">Defekt / Gumicsere</button>
+                <button class="pill-btn issue-pill active" data-issue="unboxing" data-i18n="calc.issue.unboxing">Új gép beüzemelés (Nullrevízió)</button>
+                <button class="pill-btn issue-pill" data-issue="brakes" data-i18n="calc.issue.brakes">Fékhiba / Hidraulikus tuning</button>
+                <button class="pill-btn issue-pill" data-issue="wobble" data-i18n="calc.issue.wobble">Kormányszár kotyogás / Futómű</button>
+                <button class="pill-btn issue-pill" data-issue="electric" data-i18n="calc.issue.electric">Nem kapcsol be / Hibakód / Elektronika</button>
+                <button class="pill-btn issue-pill" data-issue="waterproof" data-i18n="calc.issue.waterproof">Vízszigetelés / Általános átnézés</button>
+              </div>
+            </div>
+
+            <!-- Calculation Result Panel -->
+            <div class="calc-result-box">
+              <div class="calc-result-header" data-i18n="calc.result.title">Várható szerviz kalkuláció:</div>
+              <div class="calc-result-grid">
+                <div class="calc-result-item">
+                  <span class="label" data-i18n="calc.result.estPrice">Irányár:</span>
+                  <div class="value" id="calcEstPrice">14 900 – 18 900 Ft</div>
+                </div>
+                <div class="calc-result-item">
+                  <span class="label" data-i18n="calc.result.estTime">Várható időtartam:</span>
+                  <div class="value cyan" id="calcEstTime">1 munkanap</div>
+                </div>
+              </div>
+              <p class="calc-note" data-i18n="calc.result.note">*A végleges árat a pontos típus és az alkatrészigény alapján a roller átvizsgálásakor határozzuk meg.</p>
+            </div>
+          </div>
+
+          <!-- Right Booking Lead Form Side -->
+          <div class="calc-form-side">
+            <h3 data-i18n="calc.form.title">Kérj időpontot vagy visszahívást:</h3>
+            <form id="calcBookingForm">
+              <div class="form-group">
+                <label for="calcName" data-i18n="calc.form.name">Teljes neved</label>
+                <input type="text" id="calcName" class="form-input" placeholder="pl. Kovács Tamás" required data-i18n="calc.form.namePlh">
+              </div>
+              <div class="form-group">
+                <label for="calcPhone" data-i18n="calc.form.phone">Telefonszámod</label>
+                <input type="tel" id="calcPhone" class="form-input" placeholder="+36 30 123 4567" required data-i18n="calc.form.phonePlh">
+              </div>
+              <div class="form-group">
+                <label for="calcDesc" data-i18n="calc.form.desc">Pontos típus és hiba részletei (opcionális)</label>
+                <textarea id="calcDesc" class="form-textarea" placeholder="pl. KuKirin G2 Master, kotyog a kormány és szeretnék egy nullrevíziót..." data-i18n="calc.form.descPlh"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;" data-i18n="calc.form.submit">
+                Hibabejelentés elküldése
+              </button>
+
+              <div id="formFeedback" class="form-feedback"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         YouTube & Workshop Showcase
+         ========================================================================== -->
+    <section class="workshop-section" id="muhely">
+      <div class="container">
+        <div class="workshop-grid">
+          <div class="workshop-visual">
+            <img src="assets/images/scooter-workshop.webp" alt="RollerGarázs Műhelymunka Göd" class="workshop-img" width="600" height="380">
+            <div class="yt-badge-floating">
+              <div class="yt-icon-wrapper">
+                <div class="yt-logo-box">▶</div>
+                <div>
+                  <div class="yt-meta-name">@RollerGarazs2020</div>
+                  <div class="yt-meta-sub">Hivatalos YouTube csatorna</div>
+                </div>
+              </div>
+              <a href="https://www.youtube.com/@RollerGarazs2020" target="_blank" rel="noopener noreferrer" class="btn btn-outline-red" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; min-height: 36px;">
+                Megnézem
+              </a>
+            </div>
+          </div>
+
+          <div class="workshop-content">
+            <div class="section-badge" data-i18n="workshop.badge">SZAKMAISÁG VIDEÓN IS</div>
+            <h2 data-i18n="workshop.title">Nézd meg a műhelymunkát a YouTube csatornánkon</h2>
+            <p style="color: var(--text-muted); font-size: 1.05rem;" data-i18n="workshop.subtitle">
+              Nem zsákbamacska: a @RollerGarazs2020 csatornánkon több tízezer néző követi, hogyan szereljük és teszteljük a legújabb rollereket.
+            </p>
+
+            <div class="workshop-features">
+              <div class="workshop-feat-item">
+                <div class="workshop-feat-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="workshop-feat-title" data-i18n="workshop.f1.title">Élő hibafeltárások</h3>
+                  <p class="workshop-feat-desc" data-i18n="workshop.f1.desc">Részletesen bemutatjuk a kuKirin és más típusok gyári betegségeit és azok szakszerű javítását.</p>
+                </div>
+              </div>
+
+              <div class="workshop-feat-item">
+                <div class="workshop-feat-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="workshop-feat-title" data-i18n="workshop.f2.title">Valódi műhely Gödön</h3>
+                  <p class="workshop-feat-desc" data-i18n="workshop.f2.desc">Dedikált szerszámok, hidraulikus fék-légtelenítő készlet és motorkerékpár-szintű alkatrészpark.</p>
+                </div>
+              </div>
+
+              <div class="workshop-feat-item">
+                <div class="workshop-feat-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="workshop-feat-title" data-i18n="workshop.f3.title">Tesztvezetés átadás előtt</h3>
+                  <p class="workshop-feat-desc" data-i18n="workshop.f3.desc">Minden javított gépet személyesen tesztelünk biztonsági szempontból, mielőtt átvennéd.</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+              <a href="https://www.youtube.com/@RollerGarazs2020" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n="workshop.ytBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#ff0000">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                YouTube csatorna megtekintése
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Customer Reviews (Google Maps 5.0)
+         ========================================================================== -->
+    <section class="reviews-section" id="velemenyek">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="reviews.badge">ÜGYFÉLVÉLEMÉNYEK</div>
+          <h2 data-i18n="reviews.title">5.0 csillag a Google Térképen</h2>
+          <p data-i18n="reviews.subtitle">Göd, Dunakeszi, Vác és Budapest agglomerációjából is hozzánk hozzák a rollereket.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text" data-i18n="review.r1.text">
+              "A KuKirin G2 Master rolleremet hoztam el nullrevízióra és fékbeállításra. Minden csavart átnézett, a lengőkarokat beolajozta és a kormányszár kotyogást teljesen megszüntette. Mintha egy kategóriával jobb gépet kaptam volna vissza!"
+            </p>
+            <div class="review-author-row">
+              <div class="review-avatar">BT</div>
+              <div>
+                <div class="review-author-name" data-i18n="review.r1.author">Balázs T.</div>
+                <div class="review-scooter-type" data-i18n="review.r1.type">KuKirin G2 Master tulajdonos</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text" data-i18n="review.r2.text">
+              "Pénteken kaptam hátsó defektet a Xiaomi rolleremen, hétfőre már mehettem érte, ráadásul kapott megerősített vastag belsőt Slime-mal. Gyors, korrekt és nem próbál semmit feleslegesen rádsózni."
+            </p>
+            <div class="review-author-row">
+              <div class="review-avatar">GM</div>
+              <div>
+                <div class="review-author-name" data-i18n="review.r2.author">Gábor M.</div>
+                <div class="review-scooter-type" data-i18n="review.r2.type">Xiaomi Pro 2</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text" data-i18n="review.r3.text">
+              "Végre egy szerviz, ahol értenek is a kínai nagy teljesítményű gépekhez! Zoom hidraulikus fékeket szerelt fel és a kormányszitálást is megoldotta egy kormánystabilizátorral. 10/10 szakember."
+            </p>
+            <div class="review-author-row">
+              <div class="review-avatar">PV</div>
+              <div>
+                <div class="review-author-name" data-i18n="review.r3.author">Péter V.</div>
+                <div class="review-scooter-type" data-i18n="review.r3.type">Angwatt T1 & KuKirin G4</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Contact & Interactive Route
+         ========================================================================== -->
+    <section class="contact-section" id="kapcsolat">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge cyan" data-i18n="contact.badge">ELÉRHETŐSÉG & MŰHELY</div>
+          <h2 data-i18n="contact.title">Itt találod a RollerGarázst Gödön</h2>
+          <p data-i18n="contact.subtitle">Könnyű megközelítés az M2-esről vagy a 2-es főútról, kényelmes parkolás közvetlenül a műhely előtt a lerakodáshoz.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Details -->
+          <div class="contact-info-card">
+            <div>
+              <h3>RollerGarázs Szerviz</h3>
+              <p style="color:var(--text-muted); font-size:0.95rem; margin-top:0.25rem;">Elektromos roller javítás & beüzemelés</p>
+
+              <div class="contact-detail-list">
+                <div class="contact-item">
+                  <div class="contact-item-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contact-item-label" data-i18n="contact.address.label">Műhely címe:</span>
+                    <div class="contact-item-val" data-i18n="contact.address.val">2131 Göd, Mikszáth Kálmán utca 68. (Béke u. sarok)</div>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-item-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contact-item-label" data-i18n="contact.phone.label">Telefonszám:</span>
+                    <div class="contact-item-val">
+                      <a href="tel:+36308947739">+36 30 894 7739</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-item-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contact-item-label" data-i18n="contact.email.label">E-mail:</span>
+                    <div class="contact-item-val">
+                      <a href="mailto:joe.escooter@gmail.com">joe.escooter@gmail.com</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-item-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contact-item-label" data-i18n="contact.hours.label">Nyitvatartás:</span>
+                    <div class="contact-item-val" style="font-size:0.95rem; font-weight:500;" data-i18n="contact.hours.val">
+                      Hétfő – Péntek: 09:00 – 18:00<br>
+                      (Előzetes telefonos bejelentkezés ajánlott!)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Route CTA Buttons -->
+            <div class="contact-actions-row">
+              <a href="https://waze.com/ul?ll=47.6776119,19.1353194&navigate=yes" target="_blank" rel="noopener noreferrer" class="btn btn-waze" data-i18n="contact.btnWaze">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z"/>
+                </svg>
+                Útvonal Waze-zel
+              </a>
+              <a href="https://www.google.com/maps/place/RollerGar%C3%A1zs/@47.6776119,19.11472,14z" target="_blank" rel="noopener noreferrer" class="btn btn-maps" data-i18n="contact.btnMaps">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                Google Térkép megnyitása
+              </a>
+              <a href="tel:+36308947739" class="btn btn-primary" data-i18n="contact.btnCall">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                Hívás azonnal
+              </a>
+            </div>
+          </div>
+
+          <!-- Embedded Map -->
+          <div class="map-wrapper">
+            <iframe 
+              src="https://maps.google.com/maps?q=47.6776119,19.1353194+(RollerGar%C3%A1zs)&t=&z=15&ie=UTF8&iwloc=B&output=embed" 
+              class="map-iframe" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="RollerGarázs Térkép Göd">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       Site Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="brand-wrapper">
+          <img src="assets/logo.webp" alt="RollerGarázs Logo" class="brand-logo-img" width="40" height="40">
+          <div class="brand-text">
+            <span class="brand-name">ROLLER<span class="accent">GARÁZS</span></span>
+            <span class="brand-tagline" data-i18n="footer.desc">Márkafüggetlen elektromos roller szerviz, beüzemelés és egyedi tuning Gödön.</span>
+          </div>
+        </div>
+        <div>
+          <a href="#hero" class="btn btn-outline-red" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; min-height: 38px;">
+            ↑ Vissza a tetejére
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 RollerGarázs. <span data-i18n="footer.rights">Minden jog fenntartva.</span>
+        </div>
+        <div>
+          <a href="https://beszterczey.com" target="_blank" rel="noopener noreferrer" class="besztweb-credit">
+            <span>⚡ Weboldal koncepció:</span>
+            <strong style="color:var(--text-main);">Besztweb Stúdió</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Floating Mobile Action Bar (Sticky Bottom Bar)
+       ========================================================================== -->
+  <div class="floating-mobile-bar" aria-label="Mobil gyorsgombok">
+    <div class="floating-mobile-inner">
+      <a href="tel:+36308947739" class="float-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        <span data-i18n="float.call">Hívás</span>
+      </a>
+      <a href="https://waze.com/ul?ll=47.6776119,19.1353194&navigate=yes" target="_blank" rel="noopener noreferrer" class="float-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+        </svg>
+        <span data-i18n="float.route">Útvonal</span>
+      </a>
+      <a href="#kalkulator" class="float-btn primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+        </svg>
+        <span data-i18n="float.quote">Hibabejelentés</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="i18n.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
