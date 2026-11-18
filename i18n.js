@@ -6,18 +6,21 @@ const translations = {
     "nav.tagline": "Elektromos roller szerviz & tuning • Göd",
     "nav.services": "Szolgáltatások",
     "nav.issues": "Típushibák",
-    "nav.calculator": "Árkalkulátor",
+    "nav.calculator": "Árajánlatkérés",
     "nav.workshop": "A műhely",
     "nav.reviews": "Vélemények",
     "nav.contact": "Kapcsolat",
     "nav.callCta": "Hívás: +36 30 894 7739",
-    "nav.openStatus": "Műhely nyitva • Bejelentkezés ajánlott",
+    "nav.openStatus": "Műhely nyitva • +36 30 894 7739",
 
     // Hero Szekció
     "hero.badge": "⚡ GÖDI ROLLER SZERVIZ & TUNING MŰHELY • 5.0 ★ ÉRTÉKELÉS",
     "hero.title": "Elektromos roller szerviz, beüzemelés és profi tuning.",
     "hero.subtitle": "KuKirin, Xiaomi, Segway-Ninebot, Joyor és nagy teljesítményű gépek professzionális javítása Gödön. Defektjavítás, nullrevízió, hidraulikus fékcsere és típushiba-megszüntetés garanciával.",
-    "hero.ctaEstimate": "Hibabejelentés & Árajánlat",
+    "hero.quickPhone": "Azonnali telefonos egyeztetés:",
+    "hero.quickAddress": "Műhely címe Gödön:",
+    "hero.quickRoute": "Útvonaltervezés →",
+    "hero.ctaEstimate": "Gyors Árajánlatkérés",
     "hero.ctaCall": "Azonnali hívás: +36 30 894 7739",
     "hero.stat1.val": "5.0 ★",
     "hero.stat1.label": "Kiváló ügyfélértékelés",
@@ -70,6 +73,7 @@ const translations = {
     "services.badge": "SZOLGÁLTATÁSOK & IRÁNYÁRAK",
     "services.title": "Profi műhely, átlátható árak, garanciális munka",
     "services.subtitle": "Nincsenek rejtett költségek. A leadáskor átvizsgáljuk a rollert és előre egyeztetjük a várható javítási összeget.",
+    "services.ctaQuote": "Árajánlatkérés",
 
     "services.s1.title": "Új roller beüzemelés („Nullrevízió”)",
     "services.s1.desc": "Webshopból rendelt dobozos gép? Ne menj ki vele a forgalomba átvizsgálás nélkül! Csavarrögzítés (Loctite), futómű zsírzás, fék- és futómű-beállítás, guminyomás ellenőrzés.",
@@ -101,10 +105,10 @@ const translations = {
     "services.s6.price": "12 500 Ft-tól",
     "services.s6.time": "1 munkanap",
 
-    // Kalkulátor & Hibabejelentő
-    "calc.badge": "ONLINE HIBABEJELENTÉS & KALKULÁTOR",
-    "calc.title": "Milyen rollerrel és milyen hibával érkeznél?",
-    "calc.subtitle": "Válaszd ki a típusodat és a problémát a gyors tájékoztató kalkulációhoz, vagy küldd el az adataidat és visszahívunk az időponttal!",
+    // Kalkulátor & Árajánlatkérés
+    "calc.badge": "ONLINE ÁRAJÁNLATKÉRÉS & IRÁNYÁRAK",
+    "calc.title": "Kérj gyors árajánlatot a javításra",
+    "calc.subtitle": "Válaszd ki a roller márkáját és a hibát az azonnali tájékoztató irányárhoz, vagy küldd el az adataidat és gyorsan visszahívunk az egyeztetéssel!",
     "calc.step1": "1. Válaszd ki a márkát:",
     "calc.step2": "2. Válaszd ki a fő hibát:",
     "calc.brand.kukirin": "KuKirin / Kugoo",
@@ -126,16 +130,16 @@ const translations = {
     "calc.result.estTime": "Várható időtartam:",
     "calc.result.note": "*A végleges árat a pontos típus és az alkatrészigény alapján a roller átvizsgálásakor határozzuk meg.",
 
-    "calc.form.title": "Kérj időpontot vagy visszahívást:",
+    "calc.form.title": "Kérj árajánlatot vagy visszahívást:",
     "calc.form.name": "Teljes neved",
     "calc.form.namePlh": "pl. Kovács Tamás",
     "calc.form.phone": "Telefonszámod",
     "calc.form.phonePlh": "+36 30 123 4567",
     "calc.form.desc": "Pontos típus és hiba részletei (opcionális)",
     "calc.form.descPlh": "pl. KuKirin G2 Master, kotyog a kormány és szeretnék egy nullrevíziót...",
-    "calc.form.submit": "Hibabejelentés elküldése",
+    "calc.form.submit": "Árajánlatkérés elküldése",
     "calc.form.submitting": "Küldés folyamatban...",
-    "calc.form.success": "Köszönjük! Az üzeneted megérkezett, hamarosan felvesszük veled a kapcsolatot!",
+    "calc.form.success": "Köszönjük! Az árajánlatkérésed megérkezett, hamarosan visszahívunk az egyeztetéssel!",
 
     // Műhely & YouTube
     "workshop.badge": "SZAKMAISÁG VIDEÓN IS",
@@ -187,10 +191,14 @@ const translations = {
     "footer.creditText": "⚡ Weboldal koncepció:",
     "footer.credit": "Besztweb Stúdió (beszterczey.com)",
 
-    // Lebegő sáv mobilon
+    // Lebegő hívógomb és mobil sáv
+    "floating.badge": "SZERVIZ GYORSHÍVÁS",
+    "floating.callText": "Hívás azonnal",
+    "floating.phone": "+36 30 894 7739",
+    "floating.sub": "Göd, Mikszáth K. u. 68.",
     "float.call": "Hívás",
     "float.route": "Útvonal",
-    "float.quote": "Hibabejelentés"
+    "float.quote": "Árajánlat"
   },
   en: {
     // Navigation
@@ -198,18 +206,21 @@ const translations = {
     "nav.tagline": "Electric Scooter Repair & Tuning • Göd",
     "nav.services": "Services",
     "nav.issues": "Common Issues",
-    "nav.calculator": "Quote Calculator",
+    "nav.calculator": "Quote Request",
     "nav.workshop": "The Workshop",
     "nav.reviews": "Reviews",
     "nav.contact": "Contact",
     "nav.callCta": "Call: +36 30 894 7739",
-    "nav.openStatus": "Workshop open • Booking recommended",
+    "nav.openStatus": "Workshop open • +36 30 894 7739",
 
     // Hero Section
     "hero.badge": "⚡ SCOOTER REPAIR & TUNING IN GÖD • 5.0 ★ RATED",
     "hero.title": "Expert electric scooter repair, setup & performance tuning.",
     "hero.subtitle": "Specialized servicing for KuKirin, Xiaomi, Segway-Ninebot, Joyor and high-power scooters in Göd. Puncture repair, pre-ride inspection, hydraulic brake retrofits and zero-play steering guarantee.",
-    "hero.ctaEstimate": "Report Issue & Request Quote",
+    "hero.quickPhone": "Direct phone callback & contact:",
+    "hero.quickAddress": "Workshop address in Göd:",
+    "hero.quickRoute": "Get directions →",
+    "hero.ctaEstimate": "Quick Quote Request",
     "hero.ctaCall": "Call now: +36 30 894 7739",
     "hero.stat1.val": "5.0 ★",
     "hero.stat1.label": "Top customer rating",
@@ -262,6 +273,7 @@ const translations = {
     "services.badge": "SERVICES & TRANSPARENT PRICING",
     "services.title": "Professional workshop, clear rates, guaranteed work",
     "services.subtitle": "No hidden fees. We inspect your scooter upon drop-off and confirm the estimated cost before starting work.",
+    "services.ctaQuote": "Request Quote",
 
     "services.s1.title": "New Scooter Setup (\"Zero Revision\")",
     "services.s1.desc": "Ordered boxed online? Don't hit the streets uninspected! Bolt thread-locking (Loctite), suspension greasing, brake alignment and tire pressure calibration.",
@@ -293,10 +305,10 @@ const translations = {
     "services.s6.price": "From 12,500 HUF",
     "services.s6.time": "1 working day",
 
-    // Calculator & Booking
-    "calc.badge": "ONLINE ISSUE REPORT & ESTIMATE",
-    "calc.title": "What scooter and issue can we help with?",
-    "calc.subtitle": "Select your brand and problem for an immediate estimate, or submit your details and we'll call you right back with an appointment!",
+    // Calculator & Quote Request
+    "calc.badge": "ONLINE QUOTE REQUEST & PRICING",
+    "calc.title": "Request a quick quote for repairs",
+    "calc.subtitle": "Select your brand and issue for an immediate estimate, or submit your details and we will call you back shortly!",
     "calc.step1": "1. Select your brand:",
     "calc.step2": "2. Select main issue:",
     "calc.brand.kukirin": "KuKirin / Kugoo",
@@ -318,16 +330,16 @@ const translations = {
     "calc.result.estTime": "Estimated turnaround:",
     "calc.result.note": "*Final price is confirmed after physical inspection based on specific model and required parts.",
 
-    "calc.form.title": "Book your appointment or request callback:",
+    "calc.form.title": "Request quote or callback:",
     "calc.form.name": "Your Full Name",
     "calc.form.namePlh": "e.g. Thomas Smith",
     "calc.form.phone": "Phone Number",
     "calc.form.phonePlh": "+36 30 123 4567",
     "calc.form.desc": "Scooter model & issue details (optional)",
     "calc.form.descPlh": "e.g. KuKirin G2 Master, loose handlebar and need a full unboxing setup...",
-    "calc.form.submit": "Submit Issue Report",
+    "calc.form.submit": "Submit Quote Request",
     "calc.form.submitting": "Submitting...",
-    "calc.form.success": "Thank you! Your inquiry has been received. We will get in touch shortly!",
+    "calc.form.success": "Thank you! Your quote request has been received. We will get in touch shortly!",
 
     // Workshop & YouTube
     "workshop.badge": "VERIFIED EXPERTISE ON VIDEO",

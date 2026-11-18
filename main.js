@@ -34,15 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isOpen) {
       statusTextEl.textContent = lang === 'hu' 
-        ? 'Műhely nyitva (18:00-ig) • Bejelentkezés ajánlott' 
-        : 'Workshop open (until 18:00) • Booking recommended';
+        ? 'Műhely nyitva (18:00-ig) • +36 30 894 7739' 
+        : 'Workshop open (until 18:00) • +36 30 894 7739';
       if (pulseDot) {
         pulseDot.style.backgroundColor = 'var(--color-success)';
       }
     } else {
       statusTextEl.textContent = lang === 'hu'
-        ? 'Műhely zárva • Üzenetküldés & online időpont 0-24'
-        : 'Workshop closed • 24/7 online message & booking';
+        ? 'Műhely zárva • Online árajánlatkérés 0-24'
+        : 'Workshop closed • 24/7 online quote request';
       if (pulseDot) {
         pulseDot.style.backgroundColor = 'var(--color-secondary)';
       }
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.textContent = window.RollerI18n?.t('calc.form.submit') || 'Hibabejelentés elküldése';
+        submitBtn.textContent = window.RollerI18n?.t('calc.form.submit') || 'Árajánlatkérés elküldése';
       }
       calcForm.reset();
     }, 700);

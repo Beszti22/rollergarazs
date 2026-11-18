@@ -506,7 +506,124 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.75rem;
+}
+
+/* ==========================================================================
+   Super-Prominent Quick Contact Strip in Hero (Phone & Workshop Address)
+   ========================================================================== */
+.hero-quick-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.quick-contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(17, 22, 34, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.95rem 1.15rem;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.quick-contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.quick-phone-card {
+  border-color: rgba(229, 37, 33, 0.4);
+  background: linear-gradient(135deg, rgba(229, 37, 33, 0.14) 0%, rgba(17, 22, 34, 0.9) 70%);
+}
+
+.quick-phone-card:hover {
+  border-color: var(--color-primary-hover);
+  box-shadow: 0 8px 24px rgba(229, 37, 33, 0.3);
+}
+
+.quick-address-card {
+  border-color: rgba(0, 240, 255, 0.28);
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.09) 0%, rgba(17, 22, 34, 0.9) 70%);
+}
+
+.quick-address-card:hover {
+  border-color: var(--color-cyan);
+  box-shadow: 0 8px 24px rgba(0, 240, 255, 0.25);
+}
+
+.quick-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quick-card-icon.red {
+  background: rgba(229, 37, 33, 0.2);
+  border: 1px solid rgba(229, 37, 33, 0.45);
+  color: #ff524f;
+}
+
+.quick-card-icon.cyan {
+  background: rgba(0, 240, 255, 0.14);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  color: var(--color-cyan);
+}
+
+.quick-card-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex-grow: 1;
+}
+
+.quick-card-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.2rem;
+}
+
+.quick-card-main {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.quick-card-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+}
+
+.quick-card-badge.route {
+  background: rgba(0, 240, 255, 0.15);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  color: var(--color-cyan);
 }
 
 .hero-stats-row {
@@ -1405,6 +1522,126 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
+   Side Floating Phone Widget (Always visible, runs along the entire page)
+   ========================================================================== */
+.side-floating-phone {
+  position: fixed;
+  right: 24px;
+  bottom: 28px;
+  z-index: 998;
+  pointer-events: auto;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.side-floating-phone:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.side-phone-anchor {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: rgba(17, 22, 34, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(229, 37, 33, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 24px rgba(229, 37, 33, 0.35);
+  border-radius: var(--radius-full);
+  padding: 0.5rem 1.25rem 0.5rem 0.55rem;
+  text-decoration: none;
+  position: relative;
+  overflow: visible;
+}
+
+.side-phone-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 16px rgba(229, 37, 33, 0.7);
+  position: relative;
+  z-index: 2;
+  animation: pulseCallPhone 2.2s infinite ease-in-out;
+}
+
+.side-phone-ping {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(229, 37, 33, 0.6);
+  pointer-events: none;
+  z-index: 1;
+  animation: phoneRadarPulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes phoneRadarPulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  70% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes pulseCallPhone {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  10%, 30% {
+    transform: rotate(-12deg) scale(1.06);
+  }
+  20%, 40% {
+    transform: rotate(12deg) scale(1.06);
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.side-phone-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-phone-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-primary-hover);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.side-phone-num {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.side-phone-sub {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
    Responsive Breakpoints
    ========================================================================== */
 @media (max-width: 1280px) {
@@ -1444,6 +1681,13 @@ h1, h2, h3, h4, h5, h6 {
 
   .hero-cta-group {
     justify-content: center;
+  }
+
+  .hero-quick-contact {
+    grid-template-columns: 1fr;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-stats-row {
@@ -1528,6 +1772,36 @@ h1, h2, h3, h4, h5, h6 {
 
   .floating-mobile-bar {
     display: block;
+  }
+
+  .side-floating-phone {
+    right: 16px;
+    bottom: 84px; /* Positioned nicely above sticky bottom bar */
+  }
+
+  .side-phone-anchor {
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .side-phone-text {
+    display: none;
+  }
+
+  .side-phone-icon {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5), 0 0 20px rgba(229, 37, 33, 0.7);
+  }
+
+  .side-phone-ping {
+    top: 3px;
+    left: 3px;
+    width: 44px;
+    height: 44px;
   }
 
   body {
