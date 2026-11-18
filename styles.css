@@ -469,8 +469,8 @@ h1, h2, h3, h4, h5, h6 {
    Hero Section
    ========================================================================== */
 .hero-section {
-  padding-top: calc(var(--nav-height) + var(--space-2xl));
-  padding-bottom: clamp(4rem, 8vw, 7rem);
+  padding-top: calc(var(--nav-height) + 1.5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
   position: relative;
   overflow: hidden;
 }
@@ -671,7 +671,7 @@ h1, h2, h3, h4, h5, h6 {
     linear-gradient(180deg, rgba(22, 28, 42, 0.95) 0%, var(--bg-surface) 100%);
   border: 1px solid rgba(229, 37, 33, 0.4);
   border-radius: var(--radius-xl);
-  padding: 1.5rem 1.75rem;
+  padding: 1.15rem 1.35rem;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(229, 37, 33, 0.2);
   text-align: left;
   position: relative;
@@ -682,8 +682,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
+  padding-bottom: 0.65rem;
+  margin-bottom: 0.75rem;
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -715,22 +715,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .terminal-badge-body {
   text-align: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.85rem;
 }
 
 .badge-logo-frame {
   display: inline-block;
-  padding: 0.5rem;
+  padding: 0.35rem;
   background: radial-gradient(circle, rgba(229, 37, 33, 0.25) 0%, transparent 70%);
   border-radius: 50%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .badge-logo-frame .hero-badge-img {
-  width: 120px;
-  height: 120px;
+  width: 95px;
+  height: 95px;
   margin: 0;
-  filter: drop-shadow(0 0 20px rgba(229, 37, 33, 0.7));
+  filter: drop-shadow(0 0 16px rgba(229, 37, 33, 0.7));
   transition: transform 0.3s ease;
 }
 
@@ -739,35 +739,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .terminal-badge-body .hero-card-title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   letter-spacing: -0.01em;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.1rem;
 }
 
 .terminal-badge-body .hero-card-subtitle {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
 }
 
 .terminal-specs-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.65rem;
-  margin-bottom: 1.25rem;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
 }
 
 .terminal-spec-pill {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   background: rgba(10, 13, 20, 0.75);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
-  padding: 0.55rem 0.7rem;
+  padding: 0.45rem 0.6rem;
 }
 
 .terminal-spec-pill .spec-bullet {
-  font-size: 1rem;
+  font-size: 0.95rem;
   flex-shrink: 0;
 }
 
@@ -778,7 +778,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .terminal-spec-pill .spec-detail strong {
-  font-size: 0.76rem;
+  font-size: 0.75rem;
   color: var(--text-main);
   white-space: nowrap;
   overflow: hidden;
@@ -786,7 +786,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .terminal-spec-pill .spec-detail span {
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   color: var(--text-dim);
   font-family: var(--font-mono);
   white-space: nowrap;
@@ -797,8 +797,8 @@ h1, h2, h3, h4, h5, h6 {
 .terminal-actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.65rem;
-  padding-top: 1rem;
+  gap: 0.55rem;
+  padding-top: 0.75rem;
   border-top: 1px solid var(--border-subtle);
 }
 
