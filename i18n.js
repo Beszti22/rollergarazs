@@ -7,7 +7,7 @@ const translations = {
     "nav.services": "Szolgáltatások",
     "nav.issues": "Típushibák",
     "nav.calculator": "Árajánlatkérés",
-    "nav.workshop": "A műhely",
+    "nav.workshop": "Műhely & Videók",
     "nav.reviews": "Vélemények",
     "nav.contact": "Kapcsolat",
     "nav.callCta": "Hívás: +36 30 894 7739",
@@ -167,13 +167,43 @@ const translations = {
     "calc.form.submitting": "Küldés folyamatban...",
     "calc.form.success": "Köszönjük! Az árajánlatkérésed megérkezett, hamarosan visszahívunk az egyeztetéssel!",
 
-    // Műhely & YouTube
-    "workshop.badge": "SZAKMAISÁG VIDEÓN IS",
-    "workshop.title": "Nézd meg a műhelymunkát a YouTube csatornánkon",
-    "workshop.subtitle": "Nem zsákbamacska: a @RollerGarazs2020 csatornánkon több tízezer néző követi, hogyan szereljük és teszteljük a legújabb rollereket.",
+    // Műhely, YouTube & TikTok
+    "workshop.badge": "🎬 KÖZÖSSÉG & MŰHELYVIDEÓK",
+    "workshop.title": "Kövess minket YouTube-on és TikTokon!",
+    "workshop.subtitle": "Nézd meg a saját szemeddel, hogyan dolgozunk! Élő hibafeltárások, típushibák leleplezése, nullrevíziók és pörgős szerelős tippek videón.",
     "workshop.ytBtn": "YouTube csatorna megtekintése",
+
+    // Social Channels Hub
+    "workshop.yt.badge": "HOSSZÚ FORMÁTUMÚ VIDEÓK",
+    "workshop.yt.name": "RollerGarázs YouTube",
+    "workshop.yt.handle": "@RollerGarazs2020",
+    "workshop.yt.desc": "Mélyreható típusbemutatók, KuKirin tuningok, gyári szerelési hibák leleplezése és hidraulikus fékátépítések lépésről lépésre.",
+    "workshop.yt.btn": "YouTube csatorna megnyitása →",
+
+    "workshop.tt.badge": "PÖRGŐS TIKTOK SHORTS",
+    "workshop.tt.name": "RollerGarázs TikTok",
+    "workshop.tt.handle": "@rollergarzs",
+    "workshop.tt.desc": "Napi garázs pillanatok, brutális gyári hibák dobozbontás után, gyors szerelési trükkök és kész projektek átadása.",
+    "workshop.tt.btn": "TikTok csatorna követése →",
+
+    // Featured Videos
+    "workshop.videos.title": "Kiemelt Műhelyvideóink",
+    "workshop.videos.subtitle": "Nézz bele a legnépszerűbb szerviz- és tuninganyagainkba:",
+
+    "workshop.v1.title": "KuKirin G4 kicsit másképp... Tuning & Gyári Hibák",
+    "workshop.v1.desc": "Hogyan lesz a gyári KuKirin G4-ből stabil, biztonságos gép? Zoom hidraulikus fékek, kormánystabilizátor és rázkódáscsökkentés.",
+    "workshop.v1.btn": "Videó megtekintése →",
+
+    "workshop.v2.title": "KuKirin G2 Master dobozból: Miért tilos azonnal ráállni?",
+    "workshop.v2.desc": "Laza csavarok, száraz futómű és beállítatlan fékek a kicsomagolás után. Lépésről lépésre a szakszerű beüzemelés.",
+    "workshop.v2.btn": "Videó megtekintése →",
+
+    "workshop.v3.title": "Napi műhelypillanatok & gyors szerelési tippek",
+    "workshop.v3.desc": "Pörgős, 60 másodperces szervizvideók: defektmegelőzés, kotyogó kormányszárak és döbbenetes dobozos meglepetések.",
+    "workshop.v3.btn": "TikTok videók megtekintése →",
+
     "workshop.f1.title": "Élő hibafeltárások",
-    "workshop.f1.desc": "Részletesen bemutatjuk a kuKirin és más típusok gyári betegségeit és azok szakszerű javítását.",
+    "workshop.f1.desc": "Részletesen bemutatjuk a KuKirin és más típusok gyári betegségeit és azok szakszerű javítását.",
     "workshop.f2.title": "Valódi műhely Gödön",
     "workshop.f2.desc": "Dedikált szerszámok, hidraulikus fék-légtelenítő készlet és motorkerékpár-szintű alkatrészpark.",
     "workshop.f3.title": "Tesztvezetés átadás előtt",
@@ -233,7 +263,7 @@ const translations = {
     "nav.services": "Services",
     "nav.issues": "Common Issues",
     "nav.calculator": "Quote Request",
-    "nav.workshop": "The Workshop",
+    "nav.workshop": "Workshop & Videos",
     "nav.reviews": "Reviews",
     "nav.contact": "Contact",
     "nav.callCta": "Call: +36 30 894 7739",
@@ -393,13 +423,43 @@ const translations = {
     "calc.form.submitting": "Submitting...",
     "calc.form.success": "Thank you! Your quote request has been received. We will get in touch shortly!",
 
-    // Workshop & YouTube
-    "workshop.badge": "VERIFIED EXPERTISE ON VIDEO",
-    "workshop.title": "Watch our real workshop videos on YouTube",
-    "workshop.subtitle": "No surprises: on our @RollerGarazs2020 channel, tens of thousands follow how we teardown, diagnose and tune electric scooters.",
+    // Workshop, YouTube & TikTok
+    "workshop.badge": "🎬 COMMUNITY & WORKSHOP VIDEOS",
+    "workshop.title": "Follow Us on YouTube & TikTok!",
+    "workshop.subtitle": "See firsthand how we work! Live diagnostics, factory flaw exposes, zero-revisions and snappy workshop tips on video.",
     "workshop.ytBtn": "Visit YouTube Channel",
-    "workshop.f1.title": "Live Tear-downs & Teardowns",
-    "workshop.f1.desc": "We demonstrate the exact design flaws of KuKirin and other models and explain how to fix them properly.",
+
+    // Social Channels Hub
+    "workshop.yt.badge": "LONG-FORM TEARDOWNS",
+    "workshop.yt.name": "RollerGarázs YouTube",
+    "workshop.yt.handle": "@RollerGarazs2020",
+    "workshop.yt.desc": "In-depth model teardowns, KuKirin tuning, exposing assembly flaws and step-by-step hydraulic brake conversions.",
+    "workshop.yt.btn": "Open YouTube Channel →",
+
+    "workshop.tt.badge": "SNAPPY TIKTOK SHORTS",
+    "workshop.tt.name": "RollerGarázs TikTok",
+    "workshop.tt.handle": "@rollergarzs",
+    "workshop.tt.desc": "Daily garage insights, unboxing fails from factory crates, quick mechanic tips and finished build handoffs.",
+    "workshop.tt.btn": "Follow on TikTok →",
+
+    // Featured Videos
+    "workshop.videos.title": "Featured Workshop Videos",
+    "workshop.videos.subtitle": "Watch our most popular repair & tuning highlights:",
+
+    "workshop.v1.title": "KuKirin G4 Upgraded: Custom Tuning & Factory Flaws",
+    "workshop.v1.desc": "How we turn a stock KuKirin G4 into a safe machine: Zoom hydraulic brakes, steering damper and anti-vibration setup.",
+    "workshop.v1.btn": "Watch Video →",
+
+    "workshop.v2.title": "KuKirin G2 Master Unboxing: Why You Shouldn't Ride It Stock",
+    "workshop.v2.desc": "Loose bolts, ungreased suspension and misaligned brakes out of the box. Step-by-step professional zero-revision.",
+    "workshop.v2.btn": "Watch Video →",
+
+    "workshop.v3.title": "Daily Workshop Stories & Rapid Repair Tips",
+    "workshop.v3.desc": "Snappy 60-second shorts: puncture prevention, loose steering stems and shocking unboxing discoveries.",
+    "workshop.v3.btn": "Watch on TikTok →",
+
+    "workshop.f1.title": "Live Diagnostic Teardowns",
+    "workshop.f1.desc": "We reveal known engineering flaws of KuKirin and other brands and demonstrate proven fixes.",
     "workshop.f2.title": "Real Workshop in Göd",
     "workshop.f2.desc": "Dedicated specialty tooling, hydraulic brake bleeding stations and motorcycle-grade hardware inventory.",
     "workshop.f3.title": "Pre-delivery Road Testing",

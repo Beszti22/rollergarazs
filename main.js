@@ -278,4 +278,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 9. Interactive Map Embed on Demand
+  const loadMapBtn = document.getElementById('loadMapBtn');
+  const mapWrapper = document.getElementById('mapWrapper');
+  if (loadMapBtn && mapWrapper) {
+    loadMapBtn.addEventListener('click', () => {
+      mapWrapper.innerHTML = `
+        <iframe 
+          src="https://maps.google.com/maps?q=47.6776119,19.1353194+(RollerGar%C3%A1zs)&t=&z=15&ie=UTF8&iwloc=B&output=embed" 
+          class="map-iframe" 
+          loading="lazy" 
+          title="RollerGarázs Térkép Göd">
+        </iframe>
+      `;
+    });
+  }
 });
