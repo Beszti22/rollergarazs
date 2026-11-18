@@ -206,6 +206,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateCalculation();
 
+  // 6b. Emergency Triage Quick Problem Solver Selector
+  document.querySelectorAll('.triage-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const issue = card.getAttribute('data-issue-target');
+      if (issue) {
+        const targetBtn = document.querySelector(`.issue-pill[data-issue="${issue}"]`);
+        if (targetBtn) {
+          targetBtn.click();
+        }
+      }
+    });
+  });
+
   // 7. Booking / Issue Report Form Submission
   const calcForm = document.getElementById('calcBookingForm');
   const formFeedback = document.getElementById('formFeedback');

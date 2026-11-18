@@ -153,10 +153,11 @@
             ⚡ GÖDI ROLLER SZERVIZ & TUNING MŰHELY • 5.0 ★ ÉRTÉKELÉS
           </div>
           <h1 class="hero-title" data-i18n="hero.title">
-            Elektromos roller szerviz, beüzemelés és profi tuning.
+            Defekt? Kotyog a kormány? Nem indul?<br>
+            <span class="glow-red">Megjavítjuk.</span> Akár még ma.
           </h1>
           <p class="hero-subtitle" data-i18n="hero.subtitle">
-            KuKirin, Xiaomi, Segway-Ninebot, Joyor és nagy teljesítményű gépek professzionális javítása Gödön. Defektjavítás, nullrevízió, hidraulikus fékcsere és típushiba-megszüntetés garanciával.
+            KuKirin, Xiaomi, Segway-Ninebot és nagy teljesítményű gépek professzionális javítása Gödön. Gyors defektjavítás, nullrevízió, hidraulikus fékcsere és típushiba-megszüntetés 100% garanciával.
           </p>
           <div class="hero-cta-group">
             <a href="#kalkulator" class="btn btn-primary" data-i18n="hero.ctaEstimate">
@@ -227,17 +228,65 @@
           </div>
         </div>
 
-        <!-- Hero Visual Badge Card -->
-        <div class="hero-visual-card">
-          <img src="assets/logo.webp" alt="RollerGarázs Embléma" class="hero-badge-img" width="200" height="200">
-          <h2 class="hero-card-title">ROLLER GARÁZS</h2>
-          <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="hero.card.subtitle">Hivatalos szerviz & tuning műhely</p>
-          <div class="hero-card-tags">
-            <span class="pill-tag accent" data-i18n="hero.chip1">KuKirin Specialista</span>
-            <span class="pill-tag" data-i18n="hero.chip2">Hidraulikus Fékek</span>
-            <span class="pill-tag" data-i18n="hero.chip3">Nullrevízió</span>
-            <span class="pill-tag" data-i18n="hero.chip4">Defektmentesítés</span>
-            <span class="pill-tag" data-i18n="hero.chip5">Elektronika</span>
+        <!-- Hero Visual Badge Card (Garage Terminal HUD) -->
+        <div class="hero-visual-card garage-terminal">
+          <div class="terminal-header">
+            <div class="terminal-status">
+              <span class="pulse-dot"></span>
+              <span class="terminal-status-text">MŰHELY NYITVA • GÖD</span>
+            </div>
+            <span class="terminal-spec-tag">KuKirin Specialist</span>
+          </div>
+
+          <div class="terminal-badge-body">
+            <div class="badge-logo-frame">
+              <img src="assets/logo.webp" alt="RollerGarázs Embléma" class="hero-badge-img" width="140" height="140">
+            </div>
+            <h2 class="hero-card-title">ROLLER GARÁZS</h2>
+            <p class="hero-card-subtitle" data-i18n="hero.card.subtitle">Hivatalos szerviz & tuning műhely</p>
+          </div>
+
+          <div class="terminal-specs-grid">
+            <div class="terminal-spec-pill">
+              <span class="spec-bullet red">⚡</span>
+              <div class="spec-detail">
+                <strong>KuKirin & Nagyvasak</strong>
+                <span>G2 Master, G4, Vsett, Joyor</span>
+              </div>
+            </div>
+            <div class="terminal-spec-pill">
+              <span class="spec-bullet cyan">🛡️</span>
+              <div class="spec-detail">
+                <strong>Zero-Play Futómű</strong>
+                <span>Loctite menetrögzítés</span>
+              </div>
+            </div>
+            <div class="terminal-spec-pill">
+              <span class="spec-bullet red">🛑</span>
+              <div class="spec-detail">
+                <strong>Hidraulika Tuning</strong>
+                <span>Zoom & Nutt fékrendszerek</span>
+              </div>
+            </div>
+            <div class="terminal-spec-pill">
+              <span class="spec-bullet green">⏱️</span>
+              <div class="spec-detail">
+                <strong>Gyors átfutás</strong>
+                <span>Defektjavítás akár aznap</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="terminal-actions">
+            <a href="tel:+36308947739" class="btn btn-primary terminal-call-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              Hívás most
+            </a>
+            <a href="https://waze.com/ul?ll=47.6776119,19.1353194&navigate=yes" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cyan terminal-waze-btn">
+              Waze Útvonal →
+            </a>
           </div>
         </div>
       </div>
@@ -258,6 +307,97 @@
           <span class="brand-chip">Kaabo</span>
           <span class="brand-chip">Angwatt</span>
           <span class="brand-chip">Laotie</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Vészhelyzeti Gyorssegély & Triage (Immediate Problem Solver)
+         ========================================================================== -->
+    <section class="triage-section" id="gyorssegely">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-badge red-pulse" data-i18n="triage.badge">AZONNALI MEGOLDÁS A GONDODRA</div>
+          <h2 data-i18n="triage.title">Mi a legfőbb probléma a rollereddel?</h2>
+          <p data-i18n="triage.subtitle">Válaszd ki a leggyakoribb hibák közül, és nézd meg a gödi szakműhely megoldását!</p>
+        </div>
+
+        <div class="triage-grid">
+          <!-- Triage 1: Defekt -->
+          <a href="#kalkulator" class="triage-card" data-issue-target="flat">
+            <div class="triage-top">
+              <span class="triage-badge red">1-3 ÓRÁN BELÜL</span>
+              <div class="triage-icon red">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="4"></circle>
+                </svg>
+              </div>
+            </div>
+            <h3 class="triage-title" data-i18n="triage.c1.title">Defektet kaptál?</h3>
+            <p class="triage-desc" data-i18n="triage.c1.desc">Megerősített belső csere defektgátlóval, vagy kopásálló cellás tömör gumi préselése hidraulikus préssel.</p>
+            <div class="triage-footer">
+              <span class="triage-price">8 500 Ft-tól</span>
+              <span class="triage-link">Árajánlatkérés →</span>
+            </div>
+          </a>
+
+          <!-- Triage 2: Kotyogás -->
+          <a href="#kalkulator" class="triage-card" data-issue-target="wobble">
+            <div class="triage-top">
+              <span class="triage-badge yellow">BIZTONSÁGOS FUTÓMŰ</span>
+              <div class="triage-icon yellow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="triage-title" data-i18n="triage.c2.title">Kotyog a kormány / szitál?</h3>
+            <p class="triage-desc" data-i18n="triage.c2.desc">Kormányszár hézagolás, csapágycsere, Loctite csavarrögzítés és kormánystabilizátor gátló a stabilitásért.</p>
+            <div class="triage-footer">
+              <span class="triage-price">11 900 Ft-tól</span>
+              <span class="triage-link">Árajánlatkérés →</span>
+            </div>
+          </a>
+
+          <!-- Triage 3: Fékhiba -->
+          <a href="#kalkulator" class="triage-card" data-issue-target="brakes">
+            <div class="triage-top">
+              <span class="triage-badge cyan">BRUTÁLIS FÉKHATÁS</span>
+              <div class="triage-icon cyan">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </div>
+            </div>
+            <h3 class="triage-title" data-i18n="triage.c3.title">Gyenge a féked / csikorog?</h3>
+            <p class="triage-desc" data-i18n="triage.c3.desc">Gyenge mechanikus bowden helyett komplett hidraulikus fékátépítés (Zoom/Nutt), tárcsaegyengetés és légtelenítés.</p>
+            <div class="triage-footer">
+              <span class="triage-price">9 900 Ft-tól</span>
+              <span class="triage-link">Árajánlatkérés →</span>
+            </div>
+          </a>
+
+          <!-- Triage 4: Nullrevízió -->
+          <a href="#kalkulator" class="triage-card" data-issue-target="unboxing">
+            <div class="triage-top">
+              <span class="triage-badge green">KÖTELEZŐ ÁTVIZSGÁLÁS</span>
+              <div class="triage-icon green">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+            </div>
+            <h3 class="triage-title" data-i18n="triage.c4.title">Új gépet vettél netről?</h3>
+            <p class="triage-desc" data-i18n="triage.c4.desc">Teljes szakszerű nullrevízió: csavarrögzítés, futómű zsírzás, fékbeállítás, guminyomás kalibrálás átadás előtt.</p>
+            <div class="triage-footer">
+              <span class="triage-price">14 900 Ft-tól</span>
+              <span class="triage-link">Árajánlatkérés →</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -501,6 +641,75 @@
               <span class="service-price" data-i18n="services.s6.price">12 500 Ft-tól</span>
               <a href="#kalkulator" class="btn btn-outline-red" style="padding: 0.35rem 0.8rem; font-size: 0.8rem; min-height: 36px;" data-i18n="services.ctaQuote">Árajánlatkérés</a>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Miért a RollerGarázs? (4 Unbeatable Trust Pillars)
+         ========================================================================== -->
+    <section class="why-us-section" id="rolunk">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-badge red-pulse" data-i18n="why.badge">MIÉRT A ROLLERGARÁZS?</div>
+          <h2 data-i18n="why.title">Nem csak szerelünk: <span class="glow-red">jobbá tesszük</span> a gépedet</h2>
+          <p data-i18n="why.subtitle">A legtöbb szerviz csak alkatrészt cserél. Mi megszüntetjük a gyári tervezési hiányosságokat, hogy évekig biztonságosan gurulhass.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon-box">
+              <span class="why-num">01</span>
+              <div class="why-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                </svg>
+              </div>
+            </div>
+            <h3 class="why-card-title" data-i18n="why.c1.title">Nyílt Műhely a YouTube-on</h3>
+            <p class="why-card-desc" data-i18n="why.c1.desc">Több tízezren követik a @RollerGarazs2020 csatornánkon, hogyan szerelünk és tesztelünk rollereket. Zéró titkolózás, 100% nyitott szakmaiság.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <span class="why-num">02</span>
+              <div class="why-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="why-card-title" data-i18n="why.c2.title">Gyári Gyermekbetegségek Kiiktatása</h3>
+            <p class="why-card-desc" data-i18n="why.c2.desc">Kiküszöböljük az alulméretezett gyári csavarokat, a kormányszár holtjátékot és a beázási kockázatokat prémium Loctite-tal és szigeteléssel.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <span class="why-num">03</span>
+              <div class="why-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+              </div>
+            </div>
+            <h3 class="why-card-title" data-i18n="why.c3.title">Azonnali Alkatrészkészlet</h3>
+            <p class="why-card-desc" data-i18n="why.c3.desc">KuKirin, Xiaomi, Ninebot belsők, külsők, fékbetétek és hidraulika alkatrészek polcon a gödi műhelyben, nem kell heteket várnod külföldi rendelésekre.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <span class="why-num">04</span>
+              <div class="why-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+            </div>
+            <h3 class="why-card-title" data-i18n="why.c4.title">5.0 Google Értékelés & Garancia</h3>
+            <p class="why-card-desc" data-i18n="why.c4.desc">Göd, Dunakeszi, Vác, Fót és Pest északi részének legajánlottabb rollerműhelye. Minden általunk elvégzett munkára garanciát vállalunk.</p>
           </div>
         </div>
       </div>

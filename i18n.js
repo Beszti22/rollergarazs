@@ -15,8 +15,8 @@ const translations = {
 
     // Hero Szekció
     "hero.badge": "⚡ GÖDI ROLLER SZERVIZ & TUNING MŰHELY • 5.0 ★ ÉRTÉKELÉS",
-    "hero.title": "Elektromos roller szerviz, beüzemelés és profi tuning.",
-    "hero.subtitle": "KuKirin, Xiaomi, Segway-Ninebot, Joyor és nagy teljesítményű gépek professzionális javítása Gödön. Defektjavítás, nullrevízió, hidraulikus fékcsere és típushiba-megszüntetés garanciával.",
+    "hero.title": "Defekt? Kotyog a kormány? Nem indul?<br><span class=\"glow-red\">Megjavítjuk.</span> Akár még ma.",
+    "hero.subtitle": "KuKirin, Xiaomi, Segway-Ninebot és nagy teljesítményű gépek professzionális javítása Gödön. Gyors defektjavítás, nullrevízió, hidraulikus fékcsere és típushiba-megszüntetés 100% garanciával.",
     "hero.quickPhone": "Azonnali telefonos egyeztetés:",
     "hero.quickAddress": "Műhely címe Gödön:",
     "hero.quickRoute": "Útvonaltervezés →",
@@ -39,6 +39,32 @@ const translations = {
 
     // Támogatott márkák szalag
     "brands.title": "Specializált típusok & márkafüggetlen szerviz",
+
+    // Vészhelyzeti Gyorssegély (Triage)
+    "triage.badge": "AZONNALI MEGOLDÁS A GONDODRA",
+    "triage.title": "Mi a legfőbb probléma a rollereddel?",
+    "triage.subtitle": "Válaszd ki a leggyakoribb hibák közül, és nézd meg a gödi szakműhely megoldását!",
+    "triage.c1.title": "Defektet kaptál?",
+    "triage.c1.desc": "Megerősített belső csere defektgátlóval, vagy kopásálló cellás tömör gumi préselése hidraulikus préssel.",
+    "triage.c2.title": "Kotyog a kormány / szitál?",
+    "triage.c2.desc": "Kormányszár hézagolás, csapágycsere, Loctite csavarrögzítés és kormánystabilizátor gátló a stabilitásért.",
+    "triage.c3.title": "Gyenge a féked / csikorog?",
+    "triage.c3.desc": "Gyenge mechanikus bowden helyett komplett hidraulikus fékátépítés (Zoom/Nutt), tárcsaegyengetés és légtelenítés.",
+    "triage.c4.title": "Új gépet vettél netről?",
+    "triage.c4.desc": "Teljes szakszerű nullrevízió: csavarrögzítés, futómű zsírzás, fékbeállítás, guminyomás kalibrálás átadás előtt.",
+
+    // Miért a RollerGarázs?
+    "why.badge": "MIÉRT A ROLLERGARÁZS?",
+    "why.title": "Nem csak szerelünk: <span class=\"glow-red\">jobbá tesszük</span> a gépedet",
+    "why.subtitle": "A legtöbb szerviz csak alkatrészt cserél. Mi megszüntetjük a gyári tervezési hiányosságokat, hogy évekig biztonságosan gurulhass.",
+    "why.c1.title": "Nyílt Műhely a YouTube-on",
+    "why.c1.desc": "Több tízezren követik a @RollerGarazs2020 csatornánkon, hogyan szerelünk és tesztelünk rollereket. Zéró titkolózás, 100% nyitott szakmaiság.",
+    "why.c2.title": "Gyári Gyermekbetegségek Kiiktatása",
+    "why.c2.desc": "Kiküszöböljük az alulméretezett gyári csavarokat, a kormányszár holtjátékot és a beázási kockázatokat prémium Loctite-tal és szigeteléssel.",
+    "why.c3.title": "Azonnali Alkatrészkészlet",
+    "why.c3.desc": "KuKirin, Xiaomi, Ninebot belsők, külsők, fékbetétek és hidraulika alkatrészek polcon a gödi műhelyben, nem kell heteket várnod külföldi rendelésekre.",
+    "why.c4.title": "5.0 Google Értékelés & Garancia",
+    "why.c4.desc": "Göd, Dunakeszi, Vác, Fót és Pest északi részének legajánlottabb rollerműhelye. Minden általunk elvégzett munkára garanciát vállalunk.",
 
     // Típushibák & Megoldások
     "issues.badge": "SZAKÉRTELEM & GYAKORLAT",
@@ -215,8 +241,8 @@ const translations = {
 
     // Hero Section
     "hero.badge": "⚡ SCOOTER REPAIR & TUNING IN GÖD • 5.0 ★ RATED",
-    "hero.title": "Expert electric scooter repair, setup & performance tuning.",
-    "hero.subtitle": "Specialized servicing for KuKirin, Xiaomi, Segway-Ninebot, Joyor and high-power scooters in Göd. Puncture repair, pre-ride inspection, hydraulic brake retrofits and zero-play steering guarantee.",
+    "hero.title": "Flat tire? Loose stem? Won't power on?<br><span class=\"glow-red\">We fix it.</span> Often same-day.",
+    "hero.subtitle": "Specialized servicing for KuKirin, Xiaomi, Segway-Ninebot and high-power scooters in Göd. Puncture repair, pre-ride checkups, hydraulic brake retrofits and zero-play steering guarantee.",
     "hero.quickPhone": "Direct phone callback & contact:",
     "hero.quickAddress": "Workshop address in Göd:",
     "hero.quickRoute": "Get directions →",
@@ -239,6 +265,32 @@ const translations = {
 
     // Brands strip
     "brands.title": "Specialized in leading brands & all-make scooter repairs",
+
+    // Emergency Triage
+    "triage.badge": "IMMEDIATE REPAIR SOLUTIONS",
+    "triage.title": "What's the main issue with your scooter?",
+    "triage.subtitle": "Select your problem below for an instant workshop estimate and repair roadmap!",
+    "triage.c1.title": "Got a flat tire?",
+    "triage.c1.desc": "Reinforced inner tube with puncture sealant, or solid anti-vibration tire installation via hydraulic press.",
+    "triage.c2.title": "Wobbly stem / high-speed shake?",
+    "triage.c2.desc": "Stem joint shimming, industrial bearing swap, Loctite threadlocking and steering damper tuning.",
+    "triage.c3.title": "Weak or squeaking brakes?",
+    "triage.c3.desc": "Replace weak mechanical disc brakes with premium hydraulic Nutt/Zoom caliper kits and rotor alignment.",
+    "triage.c4.title": "Bought online in a box?",
+    "triage.c4.desc": "Complete unboxing revision: bolt threadlocking, pivot greasing, brake setup, tire pressure tuning.",
+
+    // Why RollerGarázs?
+    "why.badge": "WHY CHOOSE US?",
+    "why.title": "More than repairs: <span class=\"glow-red\">we upgrade</span> your machine",
+    "why.subtitle": "Most shops just swap parts. We eliminate manufacturer flaws so your scooter rides safely for years.",
+    "why.c1.title": "Transparent Work on YouTube",
+    "why.c1.desc": "Tens of thousands watch us teardown and build scooters on @RollerGarazs2020. 100% open, verified engineering.",
+    "why.c2.title": "Eliminate Factory Flaws",
+    "why.c2.desc": "We replace undersized factory bolts, fix loose folding neck tolerances, and waterproof controller compartments.",
+    "why.c3.title": "In-Stock Spare Parts",
+    "why.c3.desc": "Tubes, tires, brake pads, adapters and throttle modules in stock in Göd — no waiting weeks for overseas shipments.",
+    "why.c4.title": "5.0 Google Rating & Guarantee",
+    "why.c4.desc": "Top-rated repair shop across Göd, Dunakeszi, Vác and Northern Pest. Every service is backed by our full warranty.",
 
     // Issues & Fixes
     "issues.badge": "ENGINEERING & PRACTICE",
