@@ -41,7 +41,7 @@ const translations = {
     "brands.title": "Specializált típusok & márkafüggetlen szerviz",
 
     // Vészhelyzeti Gyorssegély (Triage)
-    "triage.badge": "AZONNALI MEGOLDÁS A GONDODRA",
+    "triage.badge": "⚡ VÉSZHELYZETI GYORSSEGÉLY • AZONNALI MEGOLDÁS",
     "triage.title": "Mi a legfőbb probléma a rollereddel?",
     "triage.subtitle": "Válaszd ki a leggyakoribb hibák közül, és nézd meg a gödi szakműhely megoldását!",
     "triage.c1.title": "Defektet kaptál?",
@@ -267,7 +267,7 @@ const translations = {
     "brands.title": "Specialized in leading brands & all-make scooter repairs",
 
     // Emergency Triage
-    "triage.badge": "IMMEDIATE REPAIR SOLUTIONS",
+    "triage.badge": "⚡ EMERGENCY REPAIR TRIAGE • INSTANT FIXES",
     "triage.title": "What's the main issue with your scooter?",
     "triage.subtitle": "Select your problem below for an instant workshop estimate and repair roadmap!",
     "triage.c1.title": "Got a flat tire?",
