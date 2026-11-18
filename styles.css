@@ -291,6 +291,10 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom-color: rgba(229, 37, 33, 0.2);
 }
 
+.site-header .container {
+  max-width: 1400px;
+}
+
 .nav-container {
   display: flex;
   align-items: center;
@@ -513,10 +517,11 @@ h1, h2, h3, h4, h5, h6 {
    Super-Prominent Quick Contact Strip in Hero (Phone & Workshop Address)
    ========================================================================== */
 .hero-quick-contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
   margin-bottom: 2rem;
+  max-width: 620px;
 }
 
 .quick-contact-card {
@@ -528,11 +533,10 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
-  padding: 0.95rem 1.15rem;
+  padding: 0.85rem 1.15rem;
   text-decoration: none;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
-  overflow: hidden;
 }
 
 .quick-contact-card:hover {
@@ -603,9 +607,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-main);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.3;
+  white-space: normal;
+  word-break: normal;
 }
 
 .quick-card-badge {
@@ -1644,13 +1648,16 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    Responsive Breakpoints
    ========================================================================== */
-@media (max-width: 1280px) {
+@media (max-width: 1360px) {
   .brand-tagline {
     display: none;
   }
   .nav-menu {
-    gap: 0.75rem;
+    gap: 0.85rem;
   }
+}
+
+@media (max-width: 1200px) {
   .status-pill {
     display: none;
   }
@@ -1684,7 +1691,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .hero-quick-contact {
-    grid-template-columns: 1fr;
     max-width: 540px;
     margin-left: auto;
     margin-right: auto;

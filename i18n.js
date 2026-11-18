@@ -11,7 +11,7 @@ const translations = {
     "nav.reviews": "Vélemények",
     "nav.contact": "Kapcsolat",
     "nav.callCta": "Hívás: +36 30 894 7739",
-    "nav.openStatus": "Műhely nyitva • +36 30 894 7739",
+    "nav.openStatus": "Nyitva 18:00-ig • Göd",
 
     // Hero Szekció
     "hero.badge": "⚡ GÖDI ROLLER SZERVIZ & TUNING MŰHELY • 5.0 ★ ÉRTÉKELÉS",
@@ -211,7 +211,7 @@ const translations = {
     "nav.reviews": "Reviews",
     "nav.contact": "Contact",
     "nav.callCta": "Call: +36 30 894 7739",
-    "nav.openStatus": "Workshop open • +36 30 894 7739",
+    "nav.openStatus": "Open until 18:00 • Göd",
 
     // Hero Section
     "hero.badge": "⚡ SCOOTER REPAIR & TUNING IN GÖD • 5.0 ★ RATED",

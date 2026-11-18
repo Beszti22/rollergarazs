@@ -34,15 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isOpen) {
       statusTextEl.textContent = lang === 'hu' 
-        ? 'Műhely nyitva (18:00-ig) • +36 30 894 7739' 
-        : 'Workshop open (until 18:00) • +36 30 894 7739';
+        ? 'Nyitva 18:00-ig • Göd' 
+        : 'Open until 18:00 • Göd';
       if (pulseDot) {
         pulseDot.style.backgroundColor = 'var(--color-success)';
       }
     } else {
       statusTextEl.textContent = lang === 'hu'
-        ? 'Műhely zárva • Online árajánlatkérés 0-24'
-        : 'Workshop closed • 24/7 online quote request';
+        ? 'Zárva • Ajánlatkérés 0-24'
+        : 'Closed • Quote 24/7';
       if (pulseDot) {
         pulseDot.style.backgroundColor = 'var(--color-secondary)';
       }
