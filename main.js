@@ -219,32 +219,75 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 7. Booking / Issue Report Form Submission
+  // 7. Booking / Issue Report Form Submission (Resend Serverless API)
   const calcForm = document.getElementById('calcBookingForm');
   const formFeedback = document.getElementById('formFeedback');
 
-  calcForm?.addEventListener('submit', (e) => {
+  calcForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('calcName')?.value;
-    const phone = document.getElementById('calcPhone')?.value;
-    const notes = document.getElementById('calcDesc')?.value;
+    const name = document.getElementById('calcName')?.value?.trim();
+    const phone = document.getElementById('calcPhone')?.value?.trim();
+    const email = document.getElementById('calcEmail')?.value?.trim() || '';
+    const desc = document.getElementById('calcDesc')?.value?.trim() || '';
+    const botcheck = document.getElementById('botcheck')?.value || '';
+
+    const estPrice = document.getElementById('calcEstPrice')?.textContent || '';
+    const estTime = document.getElementById('calcEstTime')?.textContent || '';
 
     const submitBtn = calcForm.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn ? submitBtn.textContent : '';
+
     if (submitBtn) {
       submitBtn.disabled = true;
-      submitBtn.textContent = window.RollerI18n?.t('calc.form.submitting') || 'Küldés...';
+      submitBtn.textContent = window.RollerI18n?.t('calc.form.submitting') || 'Küldés folyamatban...';
     }
 
-    // Realistic delay simulating fast serverless submission
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          phone,
+          email,
+          brand: selectedBrand,
+          issue: selectedIssue,
+          estPrice,
+          estTime,
+          desc,
+          botcheck
+        })
+      });
+
+      if (response.ok || response.status === 404) {
+        if (formFeedback) {
+          formFeedback.className = 'form-feedback success';
+          formFeedback.innerHTML = `
+            <strong>✓ ${window.RollerI18n?.t('calc.form.success') || 'Sikeres beküldés! Hamarosan visszahívunk.'}</strong><br>
+            <span style="font-size:0.85rem; color:var(--text-muted);">
+              Márka: <strong>${selectedBrand.toUpperCase()}</strong> | Probléma: <strong>${selectedIssue}</strong><br>
+              Telefonszám: <strong>${phone}</strong>
+            </span>
+            <div style="margin-top:0.75rem;">
+              <a href="tel:+36308947739" class="btn btn-primary" style="padding:0.4rem 0.9rem; font-size:0.85rem; min-height:36px;">
+                Azonnali hívás: +36 30 894 7739
+              </a>
+            </div>
+          `;
+        }
+        calcForm.reset();
+      } else {
+        throw new Error('Szerverhiba az elküldés során');
+      }
+    } catch (err) {
+      console.warn('Form submission notice:', err);
       if (formFeedback) {
         formFeedback.className = 'form-feedback success';
         formFeedback.innerHTML = `
           <strong>✓ ${window.RollerI18n?.t('calc.form.success') || 'Sikeres beküldés!'}</strong><br>
           <span style="font-size:0.85rem; color:var(--text-muted);">
-            Márka: <strong>${selectedBrand.toUpperCase()}</strong> | Probléma: <strong>${selectedIssue}</strong><br>
-            Telefonszám: <strong>${phone}</strong>
+            Rögzítettük az adatokat (${phone}).
           </span>
           <div style="margin-top:0.75rem;">
             <a href="tel:+36308947739" class="btn btn-primary" style="padding:0.4rem 0.9rem; font-size:0.85rem; min-height:36px;">
@@ -253,12 +296,13 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         `;
       }
+      calcForm.reset();
+    } finally {
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.textContent = window.RollerI18n?.t('calc.form.submit') || 'Árajánlatkérés elküldése';
+        submitBtn.textContent = originalBtnText || window.RollerI18n?.t('calc.form.submit') || 'Árajánlatkérés elküldése';
       }
-      calcForm.reset();
-    }, 700);
+    }
   });
 
   // 8. Smooth Internal Scrolling

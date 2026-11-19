@@ -771,6 +771,7 @@
           <div class="calc-form-side">
             <h3 data-i18n="calc.form.title">Kérj árajánlatot vagy visszahívást:</h3>
             <form id="calcBookingForm">
+              <input type="text" id="botcheck" name="botcheck" style="display:none !important;" tabindex="-1" autocomplete="off">
               <div class="form-group">
                 <label for="calcName" data-i18n="calc.form.name">Teljes neved</label>
                 <input type="text" id="calcName" class="form-input" placeholder="pl. Kovács Tamás" required data-i18n="calc.form.namePlh">
@@ -778,6 +779,10 @@
               <div class="form-group">
                 <label for="calcPhone" data-i18n="calc.form.phone">Telefonszámod</label>
                 <input type="tel" id="calcPhone" class="form-input" placeholder="+36 30 123 4567" required data-i18n="calc.form.phonePlh">
+              </div>
+              <div class="form-group">
+                <label for="calcEmail" data-i18n="calc.form.email">E-mail címed (opcionális)</label>
+                <input type="email" id="calcEmail" class="form-input" placeholder="pl. kovacs@gmail.com" data-i18n="calc.form.emailPlh">
               </div>
               <div class="form-group">
                 <label for="calcDesc" data-i18n="calc.form.desc">Pontos típus és hiba részletei (opcionális)</label>
