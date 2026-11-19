@@ -190,17 +190,17 @@ const translations = {
     "workshop.videos.title": "Kiemelt Műhelyvideóink",
     "workshop.videos.subtitle": "Nézz bele a legnépszerűbb szerviz- és tuninganyagainkba:",
 
-    "workshop.v1.title": "KuKirin G4 kicsit másképp... Tuning & Gyári Hibák",
-    "workshop.v1.desc": "Hogyan lesz a gyári KuKirin G4-ből stabil, biztonságos gép? Zoom hidraulikus fékek, kormánystabilizátor és rázkódáscsökkentés.",
-    "workshop.v1.btn": "Videó megtekintése →",
+    "workshop.v1.title": "KuKirin G2 full átépítés... (Tuning & Fejlesztés)",
+    "workshop.v1.desc": "Komplett futómű és elektronikai átépítés a RollerGarázs műhelyéből: hogyan lesz a szériagépből professzionális és biztonságos fenevad.",
+    "workshop.v1.btn": "Videó megtekintése YouTube-on →",
 
-    "workshop.v2.title": "KuKirin G2 Master dobozból: Miért tilos azonnal ráállni?",
-    "workshop.v2.desc": "Laza csavarok, száraz futómű és beállítatlan fékek a kicsomagolás után. Lépésről lépésre a szakszerű beüzemelés.",
-    "workshop.v2.btn": "Videó megtekintése →",
+    "workshop.v2.title": "Szakszerű beüzemelés kell vagy sem?? (Nullrevízió)",
+    "workshop.v2.desc": "Miért életveszélyes a gyári dobozból rögtön ráállni az új rolleredre? Laza csavarok, száraz futómű és gyári hibák leleplezése.",
+    "workshop.v2.btn": "Videó megtekintése YouTube-on →",
 
-    "workshop.v3.title": "Napi műhelypillanatok & gyors szerelési tippek",
-    "workshop.v3.desc": "Pörgős, 60 másodperces szervizvideók: defektmegelőzés, kotyogó kormányszárak és döbbenetes dobozos meglepetések.",
-    "workshop.v3.btn": "TikTok videók megtekintése →",
+    "workshop.v3.title": "RollerGarázs TikTok: Napi Műhelyvideók & Hibák",
+    "workshop.v3.desc": "Pörgős szervizvideók és élő hibafeltárások 60 másodpercben. Kövesd a hivatalos @rollergarzs TikTok fiókot az azonnali tippekért!",
+    "workshop.v3.btn": "Megnyitás TikTokon →",
 
     "workshop.f1.title": "Élő hibafeltárások",
     "workshop.f1.desc": "Részletesen bemutatjuk a KuKirin és más típusok gyári betegségeit és azok szakszerű javítását.",
@@ -446,17 +446,17 @@ const translations = {
     "workshop.videos.title": "Featured Workshop Videos",
     "workshop.videos.subtitle": "Watch our most popular repair & tuning highlights:",
 
-    "workshop.v1.title": "KuKirin G4 Upgraded: Custom Tuning & Factory Flaws",
-    "workshop.v1.desc": "How we turn a stock KuKirin G4 into a safe machine: Zoom hydraulic brakes, steering damper and anti-vibration setup.",
-    "workshop.v1.btn": "Watch Video →",
+    "workshop.v1.title": "KuKirin G2 Full Custom Build... (Tuning & Upgrades)",
+    "workshop.v1.desc": "Complete chassis and electrical overhaul from RollerGarázs workshop: turning a stock scooter into a high-performance, safe machine.",
+    "workshop.v1.btn": "Watch on YouTube →",
 
-    "workshop.v2.title": "KuKirin G2 Master Unboxing: Why You Shouldn't Ride It Stock",
-    "workshop.v2.desc": "Loose bolts, ungreased suspension and misaligned brakes out of the box. Step-by-step professional zero-revision.",
-    "workshop.v2.btn": "Watch Video →",
+    "workshop.v2.title": "Professional Zero-Revision: Is It Really Necessary?",
+    "workshop.v2.desc": "Why riding straight out of the box is a serious hazard: loose bolts, unlubricated bushings and factory defects exposed.",
+    "workshop.v2.btn": "Watch on YouTube →",
 
-    "workshop.v3.title": "Daily Workshop Stories & Rapid Repair Tips",
-    "workshop.v3.desc": "Snappy 60-second shorts: puncture prevention, loose steering stems and shocking unboxing discoveries.",
-    "workshop.v3.btn": "Watch on TikTok →",
+    "workshop.v3.title": "RollerGarázs TikTok: Daily Workshop Shorts",
+    "workshop.v3.desc": "Snappy repair clips and live defect exposes in 60 seconds. Follow our official @rollergarzs TikTok profile for instant pro tips!",
+    "workshop.v3.btn": "Open TikTok Channel →",
 
     "workshop.f1.title": "Live Diagnostic Teardowns",
     "workshop.f1.desc": "We reveal known engineering flaws of KuKirin and other brands and demonstrate proven fixes.",
